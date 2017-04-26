@@ -1,16 +1,13 @@
 package ru.boshyn.idiot.model;
 
-import java.util.ArrayList;
+public enum CartLear {
 
-public class CartLear {
+    Diamonds(1),
+    Hearts(2),
+    Spades(3),
+    Clubs(4);
 
-    public static ArrayList<String> cartLear = new ArrayList<String>();
+    CartLear(int i) {
 
-    public void CartLear() {
-        this.cartLear = cartLear;
-        cartLear.add(0,"Diamonds");
-        cartLear.add(1,"Hearts");
-        cartLear.add(2,"Spades");
-        cartLear.add(3,"Clubs");
     }
 }
