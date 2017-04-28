@@ -46,11 +46,34 @@ public class StartGame {
         return players;
     }
 
+    public  String setTrump() {
+      Random random = new Random();
+      int number = random.nextInt(4);
+      String trump = String.valueOf(CartLear.values()[number]);
+      return trump;
+    }
+
+    public  String setTrump() {
+      Random random = new Random();
+      int number = random.nextInt(4);
+      String trump = String.valueOf(CartLear.values()[number]);
+      return trump;
+    }
+
+    public  int setCurrentPlayer() {
+      Random random = new Random();
+      int number = random.nextInt(4);
+      return number;
+    }
+
     public Game CreateGame(){
         ArrayList<Player> players = createPlayer();
         Block gameBlock = createBlock();
         Block stepBlock = new Block();
-        Game gameIdiot = new Game(players, gameBlock, stepBlock, "IDIOT");
+        String gameTrump = setTrump();
+        String gameName = "IDIOT";
+        int currentPlayer = setCurrentPlayer();
+        Game gameIdiot = new Game(players, gameBlock, stepBlock, gameTrump, gameName, currentPlayer);
         return gameIdiot;
     }
 }

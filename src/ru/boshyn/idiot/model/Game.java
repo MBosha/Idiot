@@ -12,14 +12,22 @@ public class Game {
 
     private final String gameName;
 
+    private final String gameTrump;
+
+    private final int currentPlayer;
+
     public Game(final ArrayList<Player> players,
                 final Block gameBlock,
                 Block stepBlock,
-                final String gameName) {
+                final String gameTrump,
+                final String gameName,
+                int currentPlayer) {
         this.players = players;
         this.gameBlock = gameBlock;
         this.stepBlock = stepBlock;
+        this.gameTrump = gameTrump;
         this.gameName = gameName;
+        this.currentPlayer = currentPlayer;
     }
 
     public ArrayList<Player> getPlayers() {
