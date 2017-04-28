@@ -18,7 +18,7 @@ public class ConsoleView extends JFrame{
     private static float drop_v = 10;
     private static int score =0;
 
-    public static void paintWindow() throws IOException{
+    public static void paintWindow() throws IOException {
         /*background = ImageIO.read(GameWindow.class.getResourceAsStream("background.jpg"));
         game_over = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.jpg"));
         drop = ImageIO.read(GameWindow.class.getResourceAsStream("drop.jpg"));*/
@@ -67,17 +67,6 @@ public class ConsoleView extends JFrame{
             g.drawImage (drop, (int) drop_left, (int) drop_top, null);
             if (drop_top > game_window.getHeight()) g.drawImage(game_over, 0, 0, null);
             g.drawImage (game_over, 200, 200, null);*/
-        }
-
-    }
-
-    private static class GameFields extends JPanel {
-        @Override
-        protected void paintComponent (Graphics g) {
-            super.paintComponent(g);
-            onRepaint(g);
-            repaint();
-
         }
     }
 }
