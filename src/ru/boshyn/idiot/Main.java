@@ -10,10 +10,10 @@ public class Main {
     public static void main (String args[]) {
 
       //создание игры
-      Game game = CreateGame();
-      mixBlock(game.gameBlock);
-      giveCardToPlayers(game);
-      ConsoleView consoleView = new ConsoleView();
+      Game game = CreateGame(); // создать игру
+      mixBlock(game.gameBlock); // перемешать колоду
+      giveCardToPlayers(game); //раздать карты игрокам
+      ConsoleView consoleView = new ConsoleView(); //отобразить все на экране
 
       //игра
       while (!endGame()) {
@@ -47,25 +47,4 @@ public class Main {
         changeCurrentPlayer(game); //сменить ходящего
       }
     }
-
-	public static class Builder {
-
-		public Main create() {
-
-		}
-	}
-
-	public static class Builder {
-
-		public Main create() {
-
-		}
-	}
-
-	public static class Builder {
-
-		public Main create() {
-
-		}
-	}
 }

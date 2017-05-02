@@ -6,8 +6,8 @@ public class EndGame {
     //признак окончания игры карты остались только у одного игрока
     int count = 0;
     for (int p = 0; p < 4; p++) {
-      Player player = game.players[p];
-      Block block = player.playerBlock;
+      Player player = game.getPlayer(p);
+      Block block = player.getPlayerBlock();
       if (block.getSize() > 0) {
         count++;
       }

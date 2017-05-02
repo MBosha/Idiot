@@ -26,7 +26,7 @@ public class StartGame {
 
     public static void mixBlock(Block block) {
       //перемешивание созданной колоды
-        for (int j = 0; j < 10; j++) {
+        for (int j = 0; j < 35; j++) {
             for (int i = 0; i < 35; i++) {
                 Random random = new Random();
                 int number = random.nextInt(35);
@@ -52,7 +52,7 @@ public class StartGame {
     public  String setTrump() {
       //установить козырь
       Random random = new Random();
-      int number = random.nextInt(4);
+      int number = random.nextInt(3);
       String trump = String.valueOf(CartLear.values()[number]);
       return trump;
     }

@@ -42,6 +42,19 @@ public class Game {
       this.players[index] = player;
     }
 
+    public Block getPlayerBlock(int index){
+      int currentPlayer = this.game.getСurrentPlayer();
+      Player player = this.game.getPlayer(currentPlayer);
+      Block playerBlock = player.getPlayerBlock();
+      return playerBlock;
+    }
+
+    public void setPlayerBlock(Block block, int index){
+      Player player = this.game.getPlayer(index);
+      player.setPlayerBlock(block);
+      this.game.setPlayer(index, player);
+    }
+
     public Block getGameBlock() {
         return this.gameBlock;
     }
@@ -51,7 +64,7 @@ public class Game {
     }
 
     public Block getStepBlock() {
-        return stepBlock;
+        return this.stepBlock;
     }
 
     public void setStepBlock (Block block) {
@@ -59,7 +72,7 @@ public class Game {
     }
 
     public String getGameName() {
-        return gameName;
+        return this.gameName;
     }
 
     public int getСurrentPlayer() {
