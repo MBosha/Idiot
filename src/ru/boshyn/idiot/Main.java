@@ -9,6 +9,12 @@ public class Main {
 
     public static void main (String args[]) {
 
+      Game game = CreateGame();
+      mixBlock(game.gameBlock);
+      giveCardToPlayers(game);
+      ConsoleView consoleView = new ConsoleView();
+
+      while (!endGame()) {
         final Block block = new Block();
         Cart cart = new Cart();
         newCart(cart,1,1);
@@ -16,5 +22,7 @@ public class Main {
 
         cart = block.getCart(0);
         System.out.println("Lear:" + cart.getLear(cart) + " Value:" + cart.getValue(cart) + " BlockSize: " + block.getSize());
+
+      }
     }
 }

@@ -19,26 +19,30 @@ public class Block {
     }
 
     public Cart getCart(final int number) {
+      //получить карту из колоды по индексу без удаления ее из колоды????
         if (checkNumber(number)) {
             return block.get(number);
         } else {
-            System.out.print("Wrong number cart! " + number);
+            System.out.print("Wrong number card! " + number);
             return null;
         }
     }
 
-    public Cart ejectCart(Block block, final int number) {
-        Cart cart = new Cart();
-        cart = block.block.get(number);
-        block.block.remove(number);
-        return cart;
+    public Cart ejectCart(final int number) {
+      //извлечь карту из колоды по индексу  с удалением ее из колоды
+        //Cart cart = new Cart();
+        if (checkNumber(number)) {
+          return block.remove(number);
+        } else {
+          System.out.print("Wrong number card! " + number);
+          return null;
+        }
     }
 
-
-
     private boolean checkNumber(final int number) {
+      //проверка запрашиваемого индекса карты
         if (block.size() == 0) {
-            System.out.println("No many carts!");
+            System.out.println("No more cards!");
             return false;
         } else if (block.size() >= number) {
             return true;
