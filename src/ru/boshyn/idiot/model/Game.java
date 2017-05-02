@@ -1,20 +1,24 @@
 package ru.boshyn.idiot.model;
 
+import ru.boshyn.idiot.model.exceptions.InvalidNumberException;
+
 import java.util.ArrayList;
 
 public class Game {
 
     private ArrayList<Player> players = new ArrayList<Player>();
 
-    private final Block gameBlock;
+    private Block gameBlock;
 
-    private final Block stepBlock;
+    private Block stepBlock;
 
     private final String gameName;
 
     private final String gameTrump;
 
-    private final int currentPlayer;
+    private int currentPlayer;
+
+
 
     public Game(final ArrayList<Player> players,
                 final Block gameBlock,
@@ -34,25 +38,31 @@ public class Game {
         return players;
     }
 
-    public Player getPlayer(int index){
-        return this.players.get(index);
+    public Player getPlayer(int index) {
+        if (index < 4 && index >= 0) {
+            return this.players.get(index);
+        } else {
+            return null;
+        }
+
+
     }
 
     public void setPlayer(int index, Player player){
-      this.players[index] = player;
+      this.players.set(index, player);
     }
 
     public Block getPlayerBlock(int index){
-      int currentPlayer = this.game.getСurrentPlayer();
-      Player player = this.game.getPlayer(currentPlayer);
+      int currentPlayer = this.getСurrentPlayer();
+      Player player = this.getPlayer(currentPlayer);
       Block playerBlock = player.getPlayerBlock();
       return playerBlock;
     }
 
     public void setPlayerBlock(Block block, int index){
-      Player player = this.game.getPlayer(index);
+      Player player = this.getPlayer(index);
       player.setPlayerBlock(block);
-      this.game.setPlayer(index, player);
+      this.setPlayer(index, player);
     }
 
     public Block getGameBlock() {
@@ -80,6 +90,6 @@ public class Game {
     }
 
     public void setСurrentPlayer(int index) {
-        this.currentPlayer = indexw;
+        this.currentPlayer = index;
     }
 }

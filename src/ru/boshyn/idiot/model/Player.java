@@ -6,7 +6,7 @@ public class Player {
 
     private final String playerName;
 
-    private final Block playerBlock;
+    private Block playerBlock;
 
     public Player(final String name,
                   final Block block) {

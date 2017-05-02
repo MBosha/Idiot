@@ -1,8 +1,12 @@
 package ru.boshyn.idiot.controllers;
 
+import ru.boshyn.idiot.model.Block;
+import ru.boshyn.idiot.model.Game;
+import ru.boshyn.idiot.model.Player;
+
 public class EndGame {
 
-  public boolean endGame(Game game) {
+  public static boolean endGame(Game game) {
     //признак окончания игры карты остались только у одного игрока
     int count = 0;
     for (int p = 0; p < 4; p++) {

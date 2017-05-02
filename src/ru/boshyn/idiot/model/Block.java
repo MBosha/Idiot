@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Block {
 
-    private ArrayList<Cart> block = new ArrayList<Cart>();
+    private ArrayList<Cart> block = new ArrayList<>();
 
     public Block() {
         this.block = block;
@@ -28,15 +28,21 @@ public class Block {
         }
     }
 
-    public Cart ejectCart(final int number) {
+    public Cart ejectCart(final Block block, final int number) {
       //извлечь карту из колоды по индексу  с удалением ее из колоды
         //Cart cart = new Cart();
         if (checkNumber(number)) {
-          return block.remove(number);
+            Cart cart = block.getCart(number);
+            block.removeCart(number);
+            return cart;
         } else {
-          System.out.print("Wrong number card! " + number);
+          System.out.println("Wrong number card! " + number);
           return null;
         }
+    }
+
+    private void removeCart(int number) {
+        this.block.remove(number);
     }
 
     private boolean checkNumber(final int number) {
@@ -46,10 +52,10 @@ public class Block {
             return false;
         } else if (block.size() >= number) {
             return true;
-        } else {
+        } else if (number < 0){
+            System.out.println("Wrong number! N= " + number);
             return false;
         }
-
-
+        return false;
     }
 }
