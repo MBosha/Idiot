@@ -34,19 +34,39 @@ public class Game {
         return players;
     }
 
-    public Player getPlayer(int number, ArrayList<Player> players){
-        return players.get(number);
+    public Player getPlayer(int index){
+        return this.players.get(index);
+    }
+
+    public void setPlayer(int index, Player player){
+      this.players[index] = player;
     }
 
     public Block getGameBlock() {
-        return gameBlock;
+        return this.gameBlock;
+    }
+
+    public void setGameBlock(Block block) {
+        this.gameBlock =  block;
     }
 
     public Block getStepBlock() {
         return stepBlock;
     }
 
+    public void setStepBlock (Block block) {
+        this.stepBlock =  block;
+    }
+
     public String getGameName() {
         return gameName;
+    }
+
+    public int getСurrentPlayer() {
+        return this.currentPlayer;
+    }
+
+    public void setСurrentPlayer(int index) {
+        this.currentPlayer = indexw;
     }
 }

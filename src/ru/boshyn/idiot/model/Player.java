@@ -15,7 +15,11 @@ public class Player {
     }
 
     public Block getPlayerBlock() {
-        return playerBlock;
+        return this.playerBlock;
+    }
+
+    public void setPlayerBlock(Block block) {
+        this.playerBlock = block;
     }
 
     public String getPlayerName() {

@@ -9,20 +9,63 @@ public class Main {
 
     public static void main (String args[]) {
 
+      //создание игры
       Game game = CreateGame();
       mixBlock(game.gameBlock);
       giveCardToPlayers(game);
       ConsoleView consoleView = new ConsoleView();
 
+      //игра
       while (!endGame()) {
-        final Block block = new Block();
-        Cart cart = new Cart();
-        newCart(cart,1,1);
-        block.addCart(cart);
-
-        cart = block.getCart(0);
-        System.out.println("Lear:" + cart.getLear(cart) + " Value:" + cart.getValue(cart) + " BlockSize: " + block.getSize());
-
+        //ход
+        int count = 0; //счетчик подброшенных карт
+        do {
+          if (count == 0) {
+            firstMove(game); //первый заход
+          } else {
+            if (!throwUp(game)) {
+              break;
+            }; //подбрасывание карт
+          }
+          if (cover(game)) {
+            count++;
+          } else {
+            break;
+          }
+        } while (count != 6);
+        if (count == 6) {
+          hangUp(game);
+        } else {
+          do {
+            if (!throwUp(game)) {
+              break;
+            }; //подбрасывание карт
+          } while (count != 6);
+          getLose(game);
+        }
+        addOnCard(game); // добрать карты из колоды
+        changeCurrentPlayer(game); //сменить ходящего
       }
     }
+
+	public static class Builder {
+
+		public Main create() {
+
+		}
+	}
+
+	public static class Builder {
+
+		public Main create() {
+
+		}
+	}
+
+	public static class Builder {
+
+		public Main create() {
+
+		}
+	}
 }
