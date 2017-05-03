@@ -20,7 +20,7 @@ public class Block {
 
     public Cart getCart(final int number) {
       //получить карту из колоды по индексу без удаления ее из колоды????
-        if (checkNumber(number)) {
+        if (checkNumber(number) && !this.block.isEmpty()) {
             return block.get(number);
         } else {
             System.out.print("Wrong number card! " + number);

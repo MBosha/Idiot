@@ -27,7 +27,7 @@ public class Logic {
             String cartValue = cart.getValue(cart);
             String minValue = cartMin.getValue(cartMin);
             int indexCart = IntValue(cartValue);
-            int indexMin = IntValue(cartValue);
+            int indexMin = IntValue(minValue);
             if (indexCart < indexMin) {
               cartMin = cart;
               intMin = v;
@@ -37,6 +37,8 @@ public class Logic {
       }
       if (intMin != -1) {
         return intMin;
+      } else {
+        return 0;
       }
     }
     return intMin;
@@ -44,8 +46,21 @@ public class Logic {
 
   public static int findIndexCartMoo(Cart cart, Block block) {
     //найти индекс карты бальше заданной
-
-    return 0;
+    int sizeBlock = block.getSize();
+    String cartLear = cart.getLear(cart);
+    String cartValue = cart.getValue(cart);
+    int indexCartValue = Logic.IntValue(cartValue);
+    for (int i = 0; i < sizeBlock; i++) {
+      Cart cartPlayer = block.getCart(i);
+      String cartPlayerLear = cartPlayer.getLear(cartPlayer);
+      if (cartPlayerLear == cartLear) {
+        int indexCartPlayValue = Logic.IntValue(cartPlayerLear);
+        if (indexCartPlayValue > indexCartValue) {
+          return i;
+        }
+      }
+    }
+    return -1;
   }
 
   public void sortBlock(Block block) {

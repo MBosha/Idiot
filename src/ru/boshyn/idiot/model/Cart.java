@@ -30,7 +30,10 @@ public class Cart {
     }
 
     public String getLear(Cart cart) {
-        return cart.getCart().get(0);
+        if (!this.cart.isEmpty()) {
+            return cart.getCart().get(0);
+        }
+        return null;
     }
 
     public String getValue(Cart cart) {

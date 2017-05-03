@@ -36,9 +36,9 @@ public class EndGame {
     String cart2Lear = null;
     String cart2Value = null;
 
-    if (game.getStepBlock().getSize() != 0) {
-      cart1 = game.getStepBlock().getCart(0);
+    if (game.getStepBlock().getSize() >= 1)  {
 
+      cart1 = game.getStepBlock().getCart(0);
       cart1Lear = cart1.getLear(cart1);
       cart1Value = cart1.getValue(cart1);
 
