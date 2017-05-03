@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Block {
 
-    private ArrayList<Cart> block = new ArrayList<>();
+    private ArrayList<Cart> block = new ArrayList<Cart>();
 
     public Block() {
         this.block = block;

@@ -3,6 +3,7 @@ package ru.boshyn.idiot.controllers;
 import org.junit.Test;
 import ru.boshyn.idiot.model.Block;
 import ru.boshyn.idiot.model.Cart;
+import ru.boshyn.idiot.model.Game;
 
 import static org.junit.Assert.*;
 
@@ -16,7 +17,8 @@ public class StartGameTest {
         Block block = new Block();
         block = StartGame.createBlock();
         printBlock(block);
-        StartGame.mixBlock(block);
+        Game game = StartGame.CreateGame();
+        StartGame.mixBlock(game);
         printBlock(block);
     }
 

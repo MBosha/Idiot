@@ -8,19 +8,21 @@ import ru.boshyn.idiot.model.Cart;
 import ru.boshyn.idiot.model.Game;
 import ru.boshyn.idiot.view.ConsoleView;
 
-import static ru.boshyn.idiot.controllers.CurrentStep.throwUp;
+import java.io.IOException;
+
 import static ru.boshyn.idiot.controllers.StartGame.mixBlock;
 import static ru.boshyn.idiot.model.Cart.newCart;
 
 public class Main {
 
-    public static void main (String args[]) {
+    public static void main(String args[]) throws IOException {
 
       //создание игры
       Game game = StartGame.CreateGame(); // создать игру
-      mixBlock(game.getGameBlock()); // перемешать колоду
+      mixBlock(game); // перемешать колоду
       StartGame.giveCardToPlayers(game); //раздать карты игрокам
       ConsoleView consoleView = new ConsoleView(); //отобразить все на экране
+      //ConsoleView.paintWindow();
 
       //игра
       while (!EndGame.endGame(game)) {
@@ -28,30 +30,43 @@ public class Main {
         int count = 0; //счетчик подброшенных карт
         do {
           if (count == 0) {
-            CurrentStep.firstMove(game); //первый заход
+            CurrentStep.firstMove(game);
+            //первый заход
           } else {
-            if (!throwUp(game)) {
-              break;
-            }; //подбрасывание карт
+            CurrentStep.throwUp(game);
+            //подбрасывание карт при ходе
           }
+
           if (CurrentStep.cover(game)) {
             count++;
+            // кроемся
           } else {
             break;
+            //выход если не отбился
           }
+
+          if (count == 6) {
+            CurrentStep.hangUp(game);
+            //отбой
+          }
+          EndGame.printGame(game, "После отбоя!", 1);
         } while (count != 6);
-        if (count == 6) {
-          CurrentStep.hangUp(game);
-        } else {
-          do {
-            if (!throwUp(game)) {
-              break;
-            }; //подбрасывание карт
-          } while (count != 6);
+
+        //EndGame.printGame(game, "После цикла", count);
+
+        if (count != 6) {
+          while (count != 6) {
+            CurrentStep.throwUp(game);
+            //подбрасывание карт проигравшему
+            count++;
+          }
           CurrentStep.getLose(game);
+          // взять карты если не отбился
         }
         CurrentStep.addOnCard(game); // добрать карты из колоды
         CurrentStep.changeCurrentPlayer(game); //сменить ходящего
+
+
       }
     }
 }

@@ -53,8 +53,7 @@ public class Game {
     }
 
     public Block getPlayerBlock(int index){
-      int currentPlayer = this.getСurrentPlayer();
-      Player player = this.getPlayer(currentPlayer);
+      Player player = this.getPlayer(index);
       Block playerBlock = player.getPlayerBlock();
       return playerBlock;
     }
@@ -92,4 +91,9 @@ public class Game {
     public void setСurrentPlayer(int index) {
         this.currentPlayer = index;
     }
+
+    public String getGameTrump() {
+        return this.gameTrump;
+    }
+
 }

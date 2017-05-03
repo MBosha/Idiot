@@ -24,7 +24,7 @@ public class ConsoleView extends JFrame{
         drop = ImageIO.read(GameWindow.class.getResourceAsStream("drop.jpg"));*/
         game_window = new ConsoleView(); //создание окна
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //завершение программы при закрытии окна
-        game_window.setLocation(50, 50); //положение окна
+        game_window.setLocation(200, 200); //положение окна
         game_window.setSize(906, 478); //размер окна
         game_window.setResizable(false); //запрет на изменение размера окна
         last_ftame_time = System.nanoTime(); // задание таймера обновления

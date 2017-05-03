@@ -2,12 +2,12 @@ package ru.boshyn.idiot.model;
 
 public enum CartLear {
 
-    Diamonds(0),
-    Hearts(1),
-    Spades(2),
-    Clubs(3);
+    Hearts(0),
+    Diamonds(1),
+    Clubs(2),
+    Spades(3);
+
 
     CartLear(int i) {
-
     }
 }

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59899358-7643-485f-b135-fd58b02c2263" name="Default" comment="" />
+    <list default="true" id="59899358-7643-485f-b135-fd58b02c2263" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Idiot.iml" afterPath="$PROJECT_DIR$/Idiot.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/EndGame.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/EndGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartLear.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartLear.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/ru/boshyn/idiot/controllers/StartGameTest.java" afterPath="$PROJECT_DIR$/tst/ru/boshyn/idiot/controllers/StartGameTest.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,73 +31,33 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Logic.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="e#220#221#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#334#335#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
-                <marker date="1493758049916" expanded="true" signature="1340:1599" ph="{...}" />
-              </folding>
+            <state relative-caret-position="412">
+              <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java">
+      <file leaf-file-name="CartValue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#200#208#0" expanded="true" />
-                <element signature="method#Game#0;class#Game#0" expanded="false" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#914#915#0" expanded="true" />
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-                <element signature="e#1646#1647#0" expanded="true" />
-                <element signature="e#1683#1684#0" expanded="true" />
-                <element signature="e#1802#1803#0" expanded="true" />
-                <element signature="e#1839#1840#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#1924#1925#0" expanded="true" />
-                <element signature="e#2073#2074#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="192">
+              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java">
+      <file leaf-file-name="EndGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/EndGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1313">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1493755883818" expanded="true" signature="2880:2885" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="332">
+              <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,45 +65,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="155">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrentStep.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Logic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvalidNumberException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/exceptions/InvalidNumberException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,6 +84,10 @@
         <option value="JUnit4 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -166,26 +110,27 @@
         <option value="$PROJECT_DIR$/tst/ru/boshyn/idiot/model/BlockTest.java" />
         <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CreateBlock.java" />
         <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Cart.java" />
-        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartLear.java" />
         <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartValue.java" />
-        <option value="$PROJECT_DIR$/tst/ru/boshyn/idiot/controllers/StartGameTest.java" />
         <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Player.java" />
         <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/view/GameFields.java" />
-        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/EndGame.java" />
-        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java" />
-        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java" />
-        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java" />
-        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java" />
         <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java" />
+        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java" />
+        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java" />
+        <option value="$PROJECT_DIR$/tst/ru/boshyn/idiot/controllers/StartGameTest.java" />
+        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartLear.java" />
+        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java" />
         <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java" />
+        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java" />
+        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java" />
+        <option value="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/EndGame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-4" />
     <option name="y" value="-4" />
-    <option name="width" value="1608" />
-    <option name="height" value="864" />
+    <option name="width" value="1688" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -224,7 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,6 +261,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Idiot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Idiot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idiot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -371,15 +337,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="sbt.project.settings.configurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../XOBoSha" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/bin/git.exe" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -430,32 +400,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="BlockTest.getCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.boshyn.idiot.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Idiot" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.boshyn.idiot.model" />
-      <option name="MAIN_CLASS_NAME" value="ru.boshyn.idiot.model.BlockTest" />
-      <option name="METHOD_NAME" value="getCart" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="StartGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -482,32 +426,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="StartGameTest.createBlockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.boshyn.idiot.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Idiot" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.boshyn.idiot.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ru.boshyn.idiot.controllers.StartGameTest" />
-      <option name="METHOD_NAME" value="createBlockTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="StartGameTest.mixBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -522,6 +440,53 @@
       <option name="MAIN_CLASS_NAME" value="ru.boshyn.idiot.controllers.StartGameTest" />
       <option name="METHOD_NAME" value="mixBlock" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BlockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.boshyn.idiot.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Idiot" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.boshyn.idiot.model" />
+      <option name="MAIN_CLASS_NAME" value="ru.boshyn.idiot.model.BlockTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in Idiot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Idiot" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -797,18 +762,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BlockTest.getCart" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StartGameTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StartGameTest.createBlockTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StartGameTest.mixBlock" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StartGameTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StartGameTest.mixBlock" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BlockTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in Idiot" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StartGameTest.mixBlock" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StartGameTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StartGameTest.createBlockTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BlockTest.getCart" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Idiot" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BlockTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StartGameTest.mixBlock" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StartGameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -831,17 +796,17 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StartGameTest_createBlockTest - 2017.04.27 at 22h 48m 38s.xml">
-      <configuration name="StartGameTest.createBlockTest" configurationId="JUnit" />
+    <history-entry file="All_in_Idiot - 2017.05.03 at 12h 05m 11s.xml">
+      <configuration name="All in Idiot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StartGameTest_mixBlock - 2017.04.27 at 22h 50m 21s.xml">
-      <configuration name="StartGameTest.mixBlock" configurationId="JUnit" />
+    <history-entry file="All_in_Idiot - 2017.05.03 at 12h 06m 15s.xml">
+      <configuration name="All in Idiot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StartGameTest_mixBlock - 2017.04.27 at 22h 51m 21s.xml">
-      <configuration name="StartGameTest.mixBlock" configurationId="JUnit" />
+    <history-entry file="BlockTest - 2017.05.03 at 12h 04m 18s.xml">
+      <configuration name="BlockTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StartGameTest_mixBlock - 2017.04.27 at 22h 56m 51s.xml">
-      <configuration name="StartGameTest.mixBlock" configurationId="JUnit" />
+    <history-entry file="BlockTest - 2017.05.03 at 12h 04m 34s.xml">
+      <configuration name="BlockTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StartGameTest_mixBlock - 2017.04.27 at 22h 57m 21s.xml">
       <configuration name="StartGameTest.mixBlock" configurationId="JUnit" />
@@ -872,38 +837,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1608" height="864" extended-state="0" />
+    <frame x="-4" y="-4" width="1688" height="1030" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.496337" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45391062" sideWeight="0.5025707" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.503663" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6843575" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4180791" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26285347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25641027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45391062" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4519774" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -944,19 +909,28 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java</url>
-          <line>50</line>
+          <url>file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java</url>
+          <line>48</line>
           <properties />
-          <option name="timeStamp" value="80" />
+          <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java</url>
-          <line>67</line>
+          <line>164</line>
           <properties />
-          <option name="timeStamp" value="81" />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="135" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="82" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="136" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -967,16 +941,100 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#132#138#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="method#Game#0;class#Game#0" expanded="false" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="false" />
+            <element signature="e#1936#1937#0" expanded="false" />
+            <element signature="e#2061#2062#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1328">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/exceptions/InvalidNumberException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#pervsPlayer#0;class#CurrentStep#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <marker date="1493758049916" expanded="true" signature="1340:1599" ph="{...}" />
+            <element signature="e#132#138#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -985,10 +1043,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1493755883818" expanded="true" signature="2880:2885" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -997,7 +1052,7 @@
         <state relative-caret-position="294">
           <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1007,13 +1062,11 @@
         <state relative-caret-position="294">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <marker date="1493758049916" expanded="true" signature="1340:1599" ph="{...}" />
+            <element signature="e#132#138#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1049,9 +1102,9 @@
         <state relative-caret-position="756">
           <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding>
-            <element signature="e#132#140#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#132#140#0" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,13 +1114,11 @@
         <state relative-caret-position="336">
           <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <marker date="1493758049916" expanded="true" signature="1340:1599" ph="{...}" />
+            <element signature="e#132#138#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1077,9 +1128,9 @@
         <state relative-caret-position="273">
           <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding>
-            <element signature="e#132#140#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#132#140#0" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1105,7 +1156,7 @@
         <state relative-caret-position="126">
           <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1168,44 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#132#140#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tst/ru/boshyn/idiot/model/BlockTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartLear.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -1220,20 +1233,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst/ru/boshyn/idiot/controllers/StartGameTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/exceptions/InvalidNumberException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="32">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/event/MouseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/view/GameFields.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="64">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/ru/boshyn/idiot/controllers/StartGameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/ru/boshyn/idiot/model/BlockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="456" column="19" lean-forward="false" selection-start-line="456" selection-start-column="19" selection-end-line="456" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartLear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#pervsPlayer#0;class#CurrentStep#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="method#Game#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayerBlock#0;class#Game#0" expanded="false" />
+            <element signature="method#setPlayerBlock#0;class#Game#0" expanded="false" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1973#1974#0" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2176#2177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#132#138#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/CartValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1242,121 +1383,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/EndGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/exceptions/InvalidNumberException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="332">
+          <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/StartGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1313">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1493755883818" expanded="true" signature="2880:2885" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="412">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#200#208#0" expanded="true" />
-            <element signature="method#Game#0;class#Game#0" expanded="false" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1646#1647#0" expanded="true" />
-            <element signature="e#1683#1684#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1839#1840#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#2073#2074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <marker date="1493758049916" expanded="true" signature="1340:1599" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/CurrentStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Idiot</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

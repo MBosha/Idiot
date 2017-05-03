@@ -21,17 +21,19 @@ public class StartGame {
         return  block;
     }
 
-    public static void mixBlock(Block block) {
+    public static void mixBlock(Game game) {
         //перемешивание созданной колоды
+        Block gameBlock = game.getGameBlock();
         for (int j = 0; j < 35; j++) {
             for (int i = 0; i < 35; i++) {
                 Random random = new Random();
                 int number = random.nextInt(35);
                 Cart cart;
-                cart = block.ejectCart(block, number);
-                block.addCart(cart);
+                cart = gameBlock.ejectCart(gameBlock, number);
+                gameBlock.addCart(cart);
             }
         }
+        game.setGameBlock(gameBlock);
     }
 
     public static ArrayList<Player> createPlayer() {
