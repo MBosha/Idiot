@@ -65,10 +65,66 @@ public class Logic {
     return -1;
   }
 
-  public void sortBlock(Block block) {
+  public static void sortBlockAllPlayers(Game game) {
     //сортировка карт играющего
-    //масти козыри - черви - бубны - крести - пики
+    //масти пики - крести - бубны - черви - козыри
+    Block tempBlock = new Block();
+    Block tempBlockLear = new Block();
+    Cart tempCart;
+    for (int pl = 0; pl < 4; pl++) {
+      //цикл игроков
+      Block playerBlock = game.getPlayerBlock(pl); // достали колоду игрока
+      for (int l = 0; l < 4; l++) {
+        //цикл по мастям
+        //tempBlock = null;
+        String lear = String.valueOf(CartLear.values()[l]);
+        for (int p = 0; p < playerBlock.getSize(); p++) {
+          //извлечение карт одной масти
+          Cart playerCart = playerBlock.getCart(p);
+          // достали карту
+          String playerLear = playerCart.getLear(playerCart);
+          if (lear == playerLear) {
+            tempCart = playerBlock.ejectCart(playerBlock, p);
+            tempBlockLear.addCart(tempCart);
+          }
+          //добавили карту d темп мастей
+        }
+        tempBlockLear = Logic.sortTemp(tempBlockLear);
+        //сортировка по значениям
+        for (int add = 0; add < tempBlock.getSize(); add++) {
+          //добавление масти в темп колоду
+          if (tempBlockLear == null) {
+            break;
+          } else {
+            tempBlock.addCart(tempBlockLear.getCart(add));
+          }
+        }
+      }
+      game.setPlayerBlock(tempBlock, pl);
+    }
   }
+
+  public static Block sortTemp(Block block) {
+    // сортировка по значению
+    if (block.getSize() == 0) {
+      return null;
+    }
+    Block tempBlock = new Block();
+    Cart [] tempArray = new Cart[9];
+    for (int i = 0; i < block.getSize(); i++) {
+      Cart cart = block.getCart(i);
+      String value = cart.getValue(cart);
+      int index = IntValue(value);
+      tempArray[index] = cart;
+    }
+    for (int i = 0; i < 9; i++) {
+      if (tempArray[i] != null) {
+        tempBlock.addCart(tempArray[i]);
+      }
+    }
+    return tempBlock;
+  }
+
 
   public static int findIndexCartValue(Game game, int index) {
     //найти карту по значению для подбрасывания
