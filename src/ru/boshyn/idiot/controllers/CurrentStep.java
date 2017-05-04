@@ -16,7 +16,7 @@ public class CurrentStep {
     }
     int min = Logic.findIndexMinCart(playerBlock, game.getGameTrump());
     Cart cart = playerBlock.ejectCart(playerBlock, min);
-    game.setPlayerBlock(playerBlock, currentPlayer);
+    //game.setPlayerBlock(playerBlock, currentPlayer);
     stepBlock.addCart(cart);
     game.setStepBlock(stepBlock);
     return true;
@@ -144,6 +144,7 @@ public class CurrentStep {
     }
     game.setPlayerBlock(playerBlock, coverPlayer);
     game.setStepBlock(stepBlock);
+    CurrentStep.changeCurrentPlayer(game); //сменить ходящего
     return true;
   }
 

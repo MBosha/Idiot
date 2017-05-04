@@ -37,22 +37,26 @@ public class Main {
             //подбрасывание карт при ходе
           }
 
+          EndGame.printGame(game, "После Хода!", count);
+
           if (CurrentStep.cover(game)) {
-            count++;
+            if (EndGame.endCArt(game)) {
+              count = 6;
+            } else {
+              count++;
+            }
             // кроемся
           } else {
             break;
             //выход если не отбился
           }
+          EndGame.printGame(game, "После отбоя!", count);
 
           if (count == 6) {
             CurrentStep.hangUp(game);
             //отбой
           }
-          EndGame.printGame(game, "После отбоя!", 1);
         } while (count != 6);
-
-        //EndGame.printGame(game, "После цикла", count);
 
         if (count != 6) {
           while (count != 6) {
@@ -60,13 +64,14 @@ public class Main {
             //подбрасывание карт проигравшему
             count++;
           }
+          EndGame.printGame(game, "После подбрасывания!", 0);
           CurrentStep.getLose(game);
+          EndGame.printGame(game, "После взятия!", 0);
           // взять карты если не отбился
         }
         CurrentStep.addOnCard(game); // добрать карты из колоды
+        EndGame.printGame(game, "После добора!", 0);
         CurrentStep.changeCurrentPlayer(game); //сменить ходящего
-
-
       }
     }
 }

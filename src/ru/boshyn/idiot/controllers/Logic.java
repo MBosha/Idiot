@@ -54,8 +54,9 @@ public class Logic {
       Cart cartPlayer = block.getCart(i);
       String cartPlayerLear = cartPlayer.getLear(cartPlayer);
       if (cartPlayerLear == cartLear) {
-        int indexCartPlayValue = Logic.IntValue(cartPlayerLear);
-        if (indexCartPlayValue > indexCartValue) {
+        String CartPlayerValue = cartPlayer.getValue(cartPlayer);
+        int indexCartPlayerValue = Logic.IntValue(CartPlayerValue);
+        if (indexCartPlayerValue > indexCartValue) {
           return i;
         }
       }
