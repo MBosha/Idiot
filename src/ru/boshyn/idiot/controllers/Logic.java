@@ -3,6 +3,7 @@ package ru.boshyn.idiot.controllers;
 import ru.boshyn.idiot.model.Block;
 import ru.boshyn.idiot.model.Cart;
 import ru.boshyn.idiot.model.CartLear;
+import ru.boshyn.idiot.model.Game;
 
 public class Logic {
 
@@ -69,10 +70,31 @@ public class Logic {
     //масти козыри - черви - бубны - крести - пики
   }
 
-  public int findIndexCartValue(Block block, String value) {
+  public static int findIndexCartValue(Game game, int index) {
     //найти карту по значению для подбрасывания
+    Block stepBlock = game.getStepBlock();
+    Block playerBlock = game.getPlayerBlock(index);
+    for (int j = 0; j < stepBlock.getSize(); j++) {
+      //перебор карт на кону
+      Cart cartStepBlock = stepBlock.getCart(j);
+      String valueСartStepBlock;
+      if (cartStepBlock != null) {
+        valueСartStepBlock = cartStepBlock.getValue(cartStepBlock);
+      } else {
+        valueСartStepBlock = null;
+      }
+      for (int k = 0; k < playerBlock.getSize(); k++) {
+        //перебор карт игрока
+        Cart cartPlayerBlock = playerBlock.getCart(k);
+        String valueCartPlayerBlock = cartPlayerBlock.getValue(cartPlayerBlock);
+        if (valueСartStepBlock == valueCartPlayerBlock) {
+          //если нашли совпадение по значению
+          return k;
+        }
+      }
+    }
 
-    return 0;
+    return -1;
   }
 
   public static int IntLear (String lear) {

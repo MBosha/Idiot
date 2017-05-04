@@ -39,30 +39,13 @@ public class CurrentStep {
           throwUpPlayer = pervsPlayer(game);
           break;
       }
-      Block playerBlock = game.getPlayerBlock(throwUpPlayer);
-      for (int j = 0; j < stepBlockSize; j++) {
-        //перебор карт на кону
-        Cart cartStepBlock = stepBlock.getCart(j);
-        String valueСartStepBlock;
-        if (cartStepBlock != null) {
-          valueСartStepBlock = cartStepBlock.getValue(cartStepBlock);
-        } else {
-          valueСartStepBlock = "";
-        }
-        int playerBlockSize = playerBlock.getSize();
-        for (int k = 0; k < playerBlockSize; k++) {
-          //перебор карт игрока
-          Cart cartPlayerBlock = playerBlock.getCart(k);
-          String valueCartPlayerBlock = cartPlayerBlock.getValue(cartPlayerBlock);
-          if (valueСartStepBlock == valueCartPlayerBlock) {
-            //если нашли совпадение по значению
-            Cart newCartPlayerBlock = playerBlock.ejectCart(playerBlock, k);
-            //game.setPlayerBlock(playerBlock, k);
-            stepBlock.addCart(newCartPlayerBlock);
-            game.setStepBlock(stepBlock);
-            return true;
-          }
-        }
+      int index = Logic.findIndexCartValue(game, throwUpPlayer);
+      if (index != -1) {
+        Block playerBlock = game.getPlayerBlock(throwUpPlayer);
+        Cart newCartPlayerBlock = playerBlock.ejectCart(playerBlock, index);
+        stepBlock.addCart(newCartPlayerBlock);
+        game.setStepBlock(stepBlock);
+        return true;
       }
     }
     return false;
