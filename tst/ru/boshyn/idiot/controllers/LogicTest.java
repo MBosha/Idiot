@@ -16,12 +16,15 @@ public class LogicTest {
         mixBlock(game); // перемешать колоду
         StartGame.giveCardToPlayers(game); //раздать карты игрокам
         Logic.sortBlockAllPlayers(game);
-        for (int i = 0; i < 6; i++) {
-            Block block = game.getPlayerBlock(1);
-            Cart cart = block.getCart(i);
-            String lear = cart.getLear(cart);
-            String value = cart.getValue(cart);
-            System.out.println("Масть " + lear + " Значение " + value);
+        for (int j = 0; j < 4; j++) {
+            for (int i = 0; i < 6; i++) {
+                Block block = game.getPlayerBlock(j);
+                Cart cart = block.getCart(i);
+                String lear = cart.getLear(cart);
+                String value = cart.getValue(cart);
+                System.out.println("Масть " + lear + " Значение " + value);
+            }
+            System.out.println();
         }
 
     }

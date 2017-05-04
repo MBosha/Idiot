@@ -28,6 +28,17 @@ public class Block {
         }
     }
 
+    public void addBlock(final Block block) {
+        if (block != null) {
+            int blockSize = block.getSize();
+            for (int i = 0; i < blockSize; i++) {
+                Cart cart = block.getCart(i);
+                this.block.add(cart);
+                }
+        }
+
+    }
+
     public Cart ejectCart(final Block block, final int number) {
       //извлечь карту из колоды по индексу  с удалением ее из колоды
         //Cart cart = new Cart();

@@ -2,6 +2,7 @@ package ru.boshyn.idiot;
 
 import ru.boshyn.idiot.controllers.CurrentStep;
 import ru.boshyn.idiot.controllers.EndGame;
+import ru.boshyn.idiot.controllers.Logic;
 import ru.boshyn.idiot.controllers.StartGame;
 import ru.boshyn.idiot.model.Block;
 import ru.boshyn.idiot.model.Cart;
@@ -21,7 +22,8 @@ public class Main {
       Game game = StartGame.CreateGame(); // создать игру
       mixBlock(game); // перемешать колоду
       StartGame.giveCardToPlayers(game); //раздать карты игрокам
-      ConsoleView consoleView = new ConsoleView(); //отобразить все на экране
+      Logic.sortBlockAllPlayers(game);
+      //ConsoleView consoleView = new ConsoleView(); //отобразить все на экране
       //ConsoleView.paintWindow();
 
       //игра
@@ -71,6 +73,7 @@ public class Main {
         }
         CurrentStep.addOnCard(game); // добрать карты из колоды
         EndGame.printGame(game, "После добора!", 0);
+        //Logic.sortBlockAllPlayers(game);
         CurrentStep.changeCurrentPlayer(game); //сменить ходящего
       }
     }

@@ -1,5 +1,6 @@
 package ru.boshyn.idiot.controllers;
 
+import org.jetbrains.annotations.Nullable;
 import ru.boshyn.idiot.model.Block;
 import ru.boshyn.idiot.model.Cart;
 import ru.boshyn.idiot.model.CartLear;
@@ -69,46 +70,54 @@ public class Logic {
     //сортировка карт играющего
     //масти пики - крести - бубны - черви - козыри
     Block tempBlock = new Block();
-    Block tempBlockLear = new Block();
-    Cart tempCart;
+    Block Spades = new Block();
+    Block Clubs = new Block();
+    Block Diamonds = new Block();
+    Block Hearts = new Block();
+
+
     for (int pl = 0; pl < 4; pl++) {
       //цикл игроков
-      Block playerBlock = game.getPlayerBlock(pl); // достали колоду игрока
-      for (int l = 0; l < 4; l++) {
-        //цикл по мастям
-        //tempBlock = null;
-        String lear = String.valueOf(CartLear.values()[l]);
-        for (int p = 0; p < playerBlock.getSize(); p++) {
-          //извлечение карт одной масти
-          Cart playerCart = playerBlock.getCart(p);
-          // достали карту
-          String playerLear = playerCart.getLear(playerCart);
-          if (lear == playerLear) {
-            tempCart = playerBlock.ejectCart(playerBlock, p);
-            tempBlockLear.addCart(tempCart);
-          }
-          //добавили карту d темп мастей
-        }
-        tempBlockLear = Logic.sortTemp(tempBlockLear);
-        //сортировка по значениям
-        for (int add = 0; add < tempBlock.getSize(); add++) {
-          //добавление масти в темп колоду
-          if (tempBlockLear == null) {
+      Block playerBlock = game.getPlayerBlock(pl);
+      // достали колоду игрока
+      for (int p = 0; p < 6; p++) {
+        //цикл по картам колоды
+        Cart playerCart = playerBlock.getCart(p);
+        String playerLear = playerCart.getLear(playerCart);
+        switch (playerLear) {
+          case "Spades":
+            Spades.addCart(playerCart);
             break;
-          } else {
-            tempBlock.addCart(tempBlockLear.getCart(add));
-          }
+          case "Clubs":
+            Clubs.addCart(playerCart);
+            break;
+          case "Diamonds":
+            Diamonds.addCart(playerCart);
+            break;
+          case "Hearts":
+            Hearts.addCart(playerCart);
+            break;
         }
       }
+      Spades = Logic.sortTemp(Spades);
+      Clubs = Logic.sortTemp(Clubs);
+      Diamonds = Logic.sortTemp(Diamonds);
+      Hearts = Logic.sortTemp(Hearts);
+
+      tempBlock.addBlock(Spades);
+      tempBlock.addBlock(Clubs);
+      tempBlock.addBlock(Diamonds);
+      tempBlock.addBlock(Hearts);
+
       game.setPlayerBlock(tempBlock, pl);
     }
   }
 
+
+
+  @Nullable
   public static Block sortTemp(Block block) {
     // сортировка по значению
-    if (block.getSize() == 0) {
-      return null;
-    }
     Block tempBlock = new Block();
     Cart [] tempArray = new Cart[9];
     for (int i = 0; i < block.getSize(); i++) {
