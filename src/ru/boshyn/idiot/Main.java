@@ -11,6 +11,7 @@ import ru.boshyn.idiot.view.ConsoleView;
 
 import java.io.IOException;
 
+import static ru.boshyn.idiot.controllers.Logic.sortBlockAllPlayers;
 import static ru.boshyn.idiot.controllers.StartGame.mixBlock;
 import static ru.boshyn.idiot.model.Cart.newCart;
 
@@ -20,11 +21,15 @@ public class Main {
 
       //создание игры
       Game game = StartGame.CreateGame(); // создать игру
+      EndGame.printGame(game, "Создание игры!", -1);
       mixBlock(game); // перемешать колоду
+      EndGame.printGame(game, "Перемешивание карт!", -1);
       StartGame.giveCardToPlayers(game); //раздать карты игрокам
-      Logic.sortBlockAllPlayers(game);
-      //ConsoleView consoleView = new ConsoleView(); //отобразить все на экране
-      //ConsoleView.paintWindow();
+      EndGame.printGame(game, "Раздача карт!", -1);
+      //sortBlockAllPlayers(game);
+      EndGame.printGame(game, "Сортировка карт!", -1);
+      ConsoleView consoleView = new ConsoleView("И Д И О Т"); //отобразить все на экране
+      ConsoleView.paintWindow();
 
       //игра
       while (!EndGame.endGame(game)) {

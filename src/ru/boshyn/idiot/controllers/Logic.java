@@ -70,10 +70,10 @@ public class Logic {
     //сортировка карт играющего
     //масти пики - крести - бубны - черви - козыри
     Block tempBlock = new Block();
-    Block Spades = new Block();
-    Block Clubs = new Block();
-    Block Diamonds = new Block();
-    Block Hearts = new Block();
+    Block spades = new Block();
+    Block clubs = new Block();
+    Block diamonds = new Block();
+    Block hearts = new Block();
 
 
     for (int pl = 0; pl < 4; pl++) {
@@ -86,52 +86,60 @@ public class Logic {
         String playerLear = playerCart.getLear(playerCart);
         switch (playerLear) {
           case "Spades":
-            Spades.addCart(playerCart);
+            spades.addCart(playerCart);
             break;
           case "Clubs":
-            Clubs.addCart(playerCart);
+            clubs.addCart(playerCart);
             break;
           case "Diamonds":
-            Diamonds.addCart(playerCart);
+            diamonds.addCart(playerCart);
             break;
           case "Hearts":
-            Hearts.addCart(playerCart);
+            hearts.addCart(playerCart);
             break;
         }
       }
-      Spades = Logic.sortTemp(Spades);
-      Clubs = Logic.sortTemp(Clubs);
-      Diamonds = Logic.sortTemp(Diamonds);
-      Hearts = Logic.sortTemp(Hearts);
+      spades = spades.sortTemp(spades);
+      clubs = clubs.sortTemp(clubs);
+      diamonds = diamonds.sortTemp(diamonds);
+      hearts = hearts.sortTemp(hearts);
 
-      tempBlock.addBlock(Spades);
-      tempBlock.addBlock(Clubs);
-      tempBlock.addBlock(Diamonds);
-      tempBlock.addBlock(Hearts);
+      System.out.println(pl + " "
+              + game.getPlayer(0).getPlayerBlock().getSize() + " "
+              + game.getPlayer(1).getPlayerBlock().getSize() + " "
+              + game.getPlayer(2).getPlayerBlock().getSize() + " "
+              + game.getPlayer(3).getPlayerBlock().getSize() + " ");
+      System.out.println();
 
-      game.setPlayerBlock(tempBlock, pl);
+      tempBlock.addBlock(spades);
+      tempBlock.addBlock(clubs);
+      tempBlock.addBlock(diamonds);
+      tempBlock.addBlock(hearts);
+
+      System.out.println(pl + " "
+              + game.getPlayer(0).getPlayerBlock().getSize() + " "
+              + game.getPlayer(1).getPlayerBlock().getSize() + " "
+              + game.getPlayer(2).getPlayerBlock().getSize() + " "
+              + game.getPlayer(3).getPlayerBlock().getSize() + " ");
+      System.out.println();
+
+      spades.clear(spades);
+      clubs.clear(clubs);
+      diamonds.clear(diamonds);
+      hearts.clear(hearts);
+
+      playerBlock.clear(playerBlock);
+      playerBlock.addBlock(tempBlock);
+      game.setPlayerBlock(playerBlock, pl);
+      tempBlock.clear(tempBlock);
+
     }
-  }
-
-
-
-  @Nullable
-  public static Block sortTemp(Block block) {
-    // сортировка по значению
-    Block tempBlock = new Block();
-    Cart [] tempArray = new Cart[9];
-    for (int i = 0; i < block.getSize(); i++) {
-      Cart cart = block.getCart(i);
-      String value = cart.getValue(cart);
-      int index = IntValue(value);
-      tempArray[index] = cart;
-    }
-    for (int i = 0; i < 9; i++) {
-      if (tempArray[i] != null) {
-        tempBlock.addCart(tempArray[i]);
-      }
-    }
-    return tempBlock;
+    System.out.println("выход "
+                     + game.getPlayer(0).getPlayerBlock().getSize() + " "
+                     + game.getPlayer(1).getPlayerBlock().getSize() + " "
+                     + game.getPlayer(2).getPlayerBlock().getSize() + " "
+                     + game.getPlayer(3).getPlayerBlock().getSize() + " ");
+    System.out.println();
   }
 
 

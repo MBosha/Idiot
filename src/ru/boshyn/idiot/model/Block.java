@@ -2,6 +2,8 @@ package ru.boshyn.idiot.model;
 
 import java.util.ArrayList;
 
+import static ru.boshyn.idiot.controllers.Logic.IntValue;
+
 public class Block {
 
     private ArrayList<Cart> block = new ArrayList<Cart>();
@@ -68,5 +70,29 @@ public class Block {
             return false;
         }
         return false;
+    }
+
+    public void clear(Block block) {
+        if (block.getSize() >= 0) {
+                block.block.clear();
+        }
+    }
+
+    public Block sortTemp(Block block) {
+        // сортировка по значению
+        Block sortBlock = new Block();
+        Cart [] tempArray = new Cart[9];
+        for (int i = 0; i < block.getSize(); i++) {
+            Cart cart = block.getCart(i);
+            String value = cart.getValue(cart);
+            int index = IntValue(value);
+            tempArray[index] = cart;
+        }
+        for (int i = 0; i < 9; i++) {
+            if (tempArray[i] != null) {
+                sortBlock.addCart(tempArray[i]);
+            }
+        }
+        return sortBlock;
     }
 }

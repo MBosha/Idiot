@@ -7,22 +7,26 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 
-public class ConsoleView extends JFrame{
+public class ConsoleView extends JFrame {
     private static ConsoleView game_window;
     private static long last_ftame_time;
+
+
+    public ConsoleView(String s) {
+    }
     /*private static Image background;
     private static Image game_over;
-    private static Image drop;*/
+    private static Image drop;
     private static float drop_left = 100;
     private static float drop_top = -100;
     private static float drop_v = 10;
-    private static int score =0;
+    private static int score =0;*/
 
     public static void paintWindow() throws IOException {
         /*background = ImageIO.read(GameWindow.class.getResourceAsStream("background.jpg"));
         game_over = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.jpg"));
         drop = ImageIO.read(GameWindow.class.getResourceAsStream("drop.jpg"));*/
-        game_window = new ConsoleView(); //создание окна
+        game_window = new ConsoleView("И Д И О Т"); //создание окна
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //завершение программы при закрытии окна
         game_window.setLocation(200, 200); //положение окна
         game_window.setSize(906, 478); //размер окна
@@ -47,8 +51,36 @@ public class ConsoleView extends JFrame{
                 }*/
             }
         });
-        game_window.add (game_field);
+
+        game_field.setName("Name");
+
+        Panel panel = new Panel();
+        panel.setLocation(10,10);
+        panel.setBackground(Color.lightGray);
+
+
+
+        TextArea textArea = new TextArea();
+        textArea.append("Hello");
+
+        JLabel label = new JLabel();
+        label.setText("Hello");
+        label.setVerticalTextPosition(SwingConstants.CENTER);
+        label.setHorizontalTextPosition(SwingConstants.CENTER);
+
+
+
+        game_window.setTitle("И Д И О Т");
+
+
+
+        game_window.add(panel);
+        panel.setLocation(100,100);
+        panel.add(label);
+        //game_window.add(textArea);
+        //game_window.add(label);
         game_window.setVisible(true); //сделать окно видимым
+
     }
 
     private static void onRepaint (Graphics g){
