@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class ConsoleView extends JFrame {
@@ -14,6 +15,9 @@ public class ConsoleView extends JFrame {
 
     public ConsoleView(String s) {
     }
+
+    private static Image clubs;
+
     /*private static Image background;
     private static Image game_over;
     private static Image drop;
@@ -23,9 +27,12 @@ public class ConsoleView extends JFrame {
     private static int score =0;*/
 
     public static void paintWindow() throws IOException {
+        clubs = ImageIO.read(ConsoleView.class.getResourceAsStream("Clubs.jpg"));
+
         /*background = ImageIO.read(GameWindow.class.getResourceAsStream("background.jpg"));
         game_over = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.jpg"));
         drop = ImageIO.read(GameWindow.class.getResourceAsStream("drop.jpg"));*/
+
         game_window = new ConsoleView("И Д И О Т"); //создание окна
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //завершение программы при закрытии окна
         game_window.setLocation(200, 200); //положение окна
@@ -65,43 +72,43 @@ public class ConsoleView extends JFrame {
         JPanel panel2 = new JPanel();
         panel2.setBackground(Color.BLUE);
         panel2.add(new JLabel("Player_2"));
-        panel2.setSize(10,10);
 
         JPanel panel3 = new JPanel();
         panel3.setBackground(Color.GREEN);
         panel3.add(new JLabel("Player_3"));
-        panel3.setSize(100,100);
 
         JPanel panel4 = new JPanel();
         panel4.setBackground(Color.MAGENTA);
         panel4.add(new JLabel("Player_4"));
-        panel4.setSize(100,100);
 
         JPanel panelC = new JPanel();
         panelC.setBackground(Color.YELLOW);
         panel4.setSize(100,100);
         panelC.add(new JLabel("CENTER"));
 
-
         panel0.setLayout(null);
 
 
 
-        panel0.setBounds(0, 0, 100, 100);
+        panel0.setBounds(0, 0, 500, 500);
         game_window.add(panel0);
 
 
-        panel1.setBounds(0, 0, 100, 100);
-        panel0.add(panel1,BorderLayout.NORTH);
-        /*panel0.add(panel2,BorderLayout.SOUTH);
-        panel0.add(panel3,BorderLayout.EAST);
-        panel0.add(panel4,BorderLayout.WEST);
-        panel0.add(panelC,BorderLayout.CENTER);*/
+        panel1.setBounds(0, 0, 400, 100);
+        panel0.add(panel1);
 
-        //panel.setLocation(100,100);
-        //panel.add(label);
-        //game_window.add(textArea);
-        //game_window.add(label);
+        panel2.setBounds(0, 100, 100, 400);
+        panel0.add(panel2);
+
+        panel3.setBounds(400, 0, 100, 400);
+        panel0.add(panel3);
+
+        panel4.setBounds(100, 400, 400, 100);
+        panel0.add(panel4);
+
+        panelC.setBounds(100, 100, 400, 400);
+        panel0.add(panelC);
+
         game_window.setVisible(true); //сделать окно видимым
 
     }
