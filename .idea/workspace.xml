@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59899358-7643-485f-b135-fd58b02c2263" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/controllers/Logic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/model/Block.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java" afterPath="$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,8 +36,8 @@
       <file leaf-file-name="ConsoleView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="77" column="32" lean-forward="false" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+            <state relative-caret-position="308">
+              <caret line="93" column="33" lean-forward="false" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -792,8 +789,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1688" height="1030" extended-state="7" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1688" height="1030" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -802,9 +798,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.503663" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41694915" sideWeight="0.50427353" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41694915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41694915" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1342,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/boshyn/idiot/view/ConsoleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="77" column="32" lean-forward="false" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+        <state relative-caret-position="308">
+          <caret line="93" column="33" lean-forward="false" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
           <folding />
         </state>
       </provider>

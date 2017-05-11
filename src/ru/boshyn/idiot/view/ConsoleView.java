@@ -29,7 +29,7 @@ public class ConsoleView extends JFrame {
         game_window = new ConsoleView("И Д И О Т"); //создание окна
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //завершение программы при закрытии окна
         game_window.setLocation(200, 200); //положение окна
-        game_window.setSize(906, 478); //размер окна
+        game_window.setSize(500, 500); //размер окна
         game_window.setResizable(false); //запрет на изменение размера окна
         last_ftame_time = System.nanoTime(); // задание таймера обновления
         GameFields game_field = new GameFields();
@@ -52,31 +52,54 @@ public class ConsoleView extends JFrame {
             }
         });
 
-        game_field.setName("Name");
-
-        Panel panel = new Panel();
-        panel.setLocation(10,10);
-        panel.setBackground(Color.lightGray);
-
-
-
-        TextArea textArea = new TextArea();
-        textArea.append("Hello");
-
-        JLabel label = new JLabel();
-        label.setText("Hello");
-        label.setVerticalTextPosition(SwingConstants.CENTER);
-        label.setHorizontalTextPosition(SwingConstants.CENTER);
-
-
-
         game_window.setTitle("И Д И О Т");
 
+        JPanel panel0 = new JPanel();
+        panel0.setSize(200,200);
+
+        JPanel panel1 = new JPanel();
+        panel1.setBackground(Color.lightGray);
+        panel1.add(new JLabel("Player_1"));
+        panel1.setSize(200,200);
+
+        JPanel panel2 = new JPanel();
+        panel2.setBackground(Color.BLUE);
+        panel2.add(new JLabel("Player_2"));
+        panel2.setSize(10,10);
+
+        JPanel panel3 = new JPanel();
+        panel3.setBackground(Color.GREEN);
+        panel3.add(new JLabel("Player_3"));
+        panel3.setSize(100,100);
+
+        JPanel panel4 = new JPanel();
+        panel4.setBackground(Color.MAGENTA);
+        panel4.add(new JLabel("Player_4"));
+        panel4.setSize(100,100);
+
+        JPanel panelC = new JPanel();
+        panelC.setBackground(Color.YELLOW);
+        panel4.setSize(100,100);
+        panelC.add(new JLabel("CENTER"));
 
 
-        game_window.add(panel);
-        panel.setLocation(100,100);
-        panel.add(label);
+        panel0.setLayout(null);
+
+
+
+        panel0.setBounds(0, 0, 100, 100);
+        game_window.add(panel0);
+
+
+        panel1.setBounds(0, 0, 100, 100);
+        panel0.add(panel1,BorderLayout.NORTH);
+        /*panel0.add(panel2,BorderLayout.SOUTH);
+        panel0.add(panel3,BorderLayout.EAST);
+        panel0.add(panel4,BorderLayout.WEST);
+        panel0.add(panelC,BorderLayout.CENTER);*/
+
+        //panel.setLocation(100,100);
+        //panel.add(label);
         //game_window.add(textArea);
         //game_window.add(label);
         game_window.setVisible(true); //сделать окно видимым
