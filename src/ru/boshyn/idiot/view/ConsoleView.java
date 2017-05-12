@@ -14,6 +14,7 @@ public class ConsoleView extends JFrame {
     private static ConsoleView game_window;
     private static long last_ftame_time;
 
+
     /*private static Image background;
     private static Image game_over;
     private static Image drop;
@@ -27,20 +28,15 @@ public class ConsoleView extends JFrame {
 
     public static void paintWindow() throws IOException {
 
-
-        /*background = ImageIO.read(GameWindow.class.getResourceAsStream("background.jpg"));
-        game_over = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.jpg"));
-        drop = ImageIO.read(GameWindow.class.getResourceAsStream("drop.jpg"));*/
-
         game_window = new ConsoleView("И Д И О Т"); //создание окна
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //завершение программы при закрытии окна
         game_window.setLocation(200, 200); //положение окна
         game_window.setSize(500, 500); //размер окна
         game_window.setResizable(false); //запрет на изменение размера окна
-        last_ftame_time = System.nanoTime(); // задание таймера обновления
-
         game_window.setTitle("И Д И О Т");
         game_window.setLayout(null);
+
+        last_ftame_time = System.nanoTime(); // задание таймера обновления
 
         JPanel panel1 = new JPanel();
         panel1.setBackground(Color.lightGray);
@@ -63,12 +59,8 @@ public class ConsoleView extends JFrame {
         panelC.add(labelC);
         panelC.setBackground(Color.YELLOW);
 
-        PanelCart panelCart = new PanelCart();
-
-
         panel1.setBounds(0, 0, 400, 100);
         game_window.add(panel1);
-        //panel0.add(panel1);
 
         panel2.setBounds(400, 0, 100, 400);
         game_window.add(panel2);
@@ -83,7 +75,12 @@ public class ConsoleView extends JFrame {
         panelC.setBounds(100, 100, 300, 300);
         game_window.add(panelC);
 
-        game_window.add(PanelCart.newPanelCart());
+        game_window.add(PanelCart.newPanelCart(100, 100, 0, 0));
+        game_window.add(PanelCart.newPanelCart(200, 200, 1, 3));
+        game_window.add(PanelCart.newPanelCart(300, 300, 2, 5));
+        game_window.add(PanelCart.newPanelCart(400, 400, 3, 8));
+
+        PanelCart.paint(50,50);
 
         //GameFields game_field = new GameFields();
 
@@ -109,46 +106,5 @@ public class ConsoleView extends JFrame {
 
         game_window.setVisible(true); //сделать окно видимым
 
-
     }
-
-    private void add(Image image) {
-    }
-
-    static void onRepaint (Graphics g, int x, int y){
-        /*for (int i = 1; i <= 100; i++) {
-            int x1 = 5 * i;
-            int y1 = 6 * i;
-            int x2 = 7 * i;
-            int y2 = 8 * i;
-            long current_time = System.nanoTime();
-            float delta_time = (current_time - last_ftame_time) * 0.000000001f;
-            last_ftame_time = current_time;*/
-
-        /*g.drawImage (hearts, x, y, null);
-        g.drawImage (diamonds, x + 20, y, null);
-        g.drawImage (clubs, x + 40, y, null);
-        g.drawImage (spades, x + 60, y, null);*/
-
-
-
-            /*drop_top = drop_top + drop_v * delta_time;
-            drop_left = drop_left + drop_v * delta_time;
-            g.drawImage (background, 0, 0, null);
-            g.drawImage (drop, (int) drop_left, (int) drop_top, null);
-            if (drop_top > game_window.getHeight()) g.drawImage(game_over, 0, 0, null);
-            g.drawImage (game_over, 200, 200, null);*/
-    }
-
-    /*private static class PanelC extends JPanel {
-        @Override
-        protected void paintComponent (Graphics g) {
-            super.paintComponent(g);
-            onRepaint(g);
-            repaint();
-
-        }
-    }*/
-
-
 }

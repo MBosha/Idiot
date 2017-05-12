@@ -5,7 +5,9 @@ import org.jetbrains.annotations.Nullable;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.ImageObserver;
 import java.io.IOException;
+import java.text.AttributedCharacterIterator;
 
 
 class PanelCart extends JPanel {
@@ -14,6 +16,7 @@ class PanelCart extends JPanel {
     private static Image diamonds;
     private static Image hearts;
     private static Image spades;
+
     private static Image six;
     private static Image seven;
     private static Image eight;
@@ -24,19 +27,22 @@ class PanelCart extends JPanel {
     private static Image king;
     private static Image ace;
 
+    private static int indexLear;
+    private static int indexValue;
+
     //private ArrayList<Image> panelCarts = new ArrayList<Image>();
 
     @Nullable
     public static Image panelSetImgLear(int index) throws IOException {
         switch (index) {
             case 0 :
-                return  ImageIO.read(ConsoleView.class.getResourceAsStream("clubs.png"));
+                return  ImageIO.read(ConsoleView.class.getResourceAsStream("hearts.png"));
 
             case 1 :
                 return ImageIO.read(ConsoleView.class.getResourceAsStream("diamonds.png"));
 
             case 2 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("hearts.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("clubs.png"));
 
             case 3 :
                 return ImageIO.read(ConsoleView.class.getResourceAsStream("spades.png"));
@@ -84,10 +90,12 @@ class PanelCart extends JPanel {
         this.panelCarts = panelCarts;
     }*/
 
-    public static PanelCart newPanelCart() throws IOException {
+    public static PanelCart newPanelCart(int x, int y, int indexLear, int indexValue) throws IOException {
+        PanelCart.indexLear = indexLear;
+        PanelCart.indexValue = indexValue;
         GameFields panelCart = new GameFields();
         panelCart.setBackground(Color.RED);
-        panelCart.setBounds(200, 150, 25, 50);
+        panelCart.setBounds(x, y, 25, 50);
         return panelCart;
     }
 
@@ -97,33 +105,217 @@ class PanelCart extends JPanel {
     }*/
 
 
-    private static void onRepaint (Graphics g, Image image, int x, int y){
-        g.drawImage (image, x, y, null);
+    public static boolean paint(int x, int y){
+        return graphics.drawImage (ace, x, y, null);
     }
 
-
     private static class GameFields extends PanelCart {
+
         @Override
         protected void paintComponent (Graphics g) {
             super.paintComponent(g);
-            Image image = null;
             try {
-                image = panelSetImgValue(0);
+                onRepaint(g, panelSetImgLear(PanelCart.indexLear), 2, 0);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            onRepaint(g, image, 2, 0);
             try {
-                image = panelSetImgLear(0);
+                onRepaint(g, panelSetImgValue(PanelCart.indexValue), 2, 26);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            onRepaint(g, image, 2, 26);
-
-
+            //PanelCart.indexLear = -1;
+            //PanelCart.indexValue = -1;
             repaint();
 
         }
 
     }
+
+    private static void onRepaint (Graphics g, Image image, int x, int y){
+        g.drawImage (image, x, y, null);
+    }
+
+    private static Graphics graphics = new Graphics() {
+        @Override
+        public Graphics create() {
+            return null;
+        }
+
+        @Override
+        public void translate(int x, int y) {
+
+        }
+
+        @Override
+        public Color getColor() {
+            return null;
+        }
+
+        @Override
+        public void setColor(Color c) {
+
+        }
+
+        @Override
+        public void setPaintMode() {
+
+        }
+
+        @Override
+        public void setXORMode(Color c1) {
+
+        }
+
+        @Override
+        public Font getFont() {
+            return null;
+        }
+
+        @Override
+        public void setFont(Font font) {
+
+        }
+
+        @Override
+        public FontMetrics getFontMetrics(Font f) {
+            return null;
+        }
+
+        @Override
+        public Rectangle getClipBounds() {
+            return null;
+        }
+
+        @Override
+        public void clipRect(int x, int y, int width, int height) {
+
+        }
+
+        @Override
+        public void setClip(int x, int y, int width, int height) {
+
+        }
+
+        @Override
+        public Shape getClip() {
+            return null;
+        }
+
+        @Override
+        public void setClip(Shape clip) {
+
+        }
+
+        @Override
+        public void copyArea(int x, int y, int width, int height, int dx, int dy) {
+
+        }
+
+        @Override
+        public void drawLine(int x1, int y1, int x2, int y2) {
+
+        }
+
+        @Override
+        public void fillRect(int x, int y, int width, int height) {
+
+        }
+
+        @Override
+        public void clearRect(int x, int y, int width, int height) {
+
+        }
+
+        @Override
+        public void drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
+
+        }
+
+        @Override
+        public void fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
+
+        }
+
+        @Override
+        public void drawOval(int x, int y, int width, int height) {
+
+        }
+
+        @Override
+        public void fillOval(int x, int y, int width, int height) {
+
+        }
+
+        @Override
+        public void drawArc(int x, int y, int width, int height, int startAngle, int arcAngle) {
+
+        }
+
+        @Override
+        public void fillArc(int x, int y, int width, int height, int startAngle, int arcAngle) {
+
+        }
+
+        @Override
+        public void drawPolyline(int[] xPoints, int[] yPoints, int nPoints) {
+
+        }
+
+        @Override
+        public void drawPolygon(int[] xPoints, int[] yPoints, int nPoints) {
+
+        }
+
+        @Override
+        public void fillPolygon(int[] xPoints, int[] yPoints, int nPoints) {
+
+        }
+
+        @Override
+        public void drawString(String str, int x, int y) {
+
+        }
+
+        @Override
+        public void drawString(AttributedCharacterIterator iterator, int x, int y) {
+
+        }
+
+        @Override
+        public boolean drawImage(Image img, int x, int y, ImageObserver observer) {
+            return false;
+        }
+
+        @Override
+        public boolean drawImage(Image img, int x, int y, int width, int height, ImageObserver observer) {
+            return false;
+        }
+
+        @Override
+        public boolean drawImage(Image img, int x, int y, Color bgcolor, ImageObserver observer) {
+            return false;
+        }
+
+        @Override
+        public boolean drawImage(Image img, int x, int y, int width, int height, Color bgcolor, ImageObserver observer) {
+            return false;
+        }
+
+        @Override
+        public boolean drawImage(Image img, int dx1, int dy1, int dx2, int dy2, int sx1, int sy1, int sx2, int sy2, ImageObserver observer) {
+            return false;
+        }
+
+        @Override
+        public boolean drawImage(Image img, int dx1, int dy1, int dx2, int dy2, int sx1, int sy1, int sx2, int sy2, Color bgcolor, ImageObserver observer) {
+            return false;
+        }
+
+        @Override
+        public void dispose() {
+
+        }
+    };
+
 }
