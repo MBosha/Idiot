@@ -10,7 +10,7 @@ public class Cart {
         this.cart = cart;
     }
 
-    public static Cart newCart(Cart cart, final int intLear, final int intValue) {
+    public static Cart newCart(final Cart cart, final int intLear, final int intValue) {
         //Cart cart = new Cart();
         cart.add(String.valueOf(CartLear.values()[intLear]));
         cart.add(String.valueOf(CartValue.values()[intValue]));
