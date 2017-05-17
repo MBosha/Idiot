@@ -75,10 +75,15 @@ public class ConsoleView extends JFrame {
         panelC.setBounds(100, 100, 300, 300);
         game_window.add(panelC);
 
-        game_window.add(PanelCart.newPanelCart(100, 100, 0, 0));
-        game_window.add(PanelCart.newPanelCart(200, 200, 1, 3));
-        game_window.add(PanelCart.newPanelCart(300, 300, 2, 5));
-        game_window.add(PanelCart.newPanelCart(400, 400, 3, 8));
+        PanelCart panelCart_1 = new PanelCart();
+        PanelCart panelCart_2 = new PanelCart();
+        PanelCart panelCart_3 = new PanelCart();
+        PanelCart panelCart_4 = new PanelCart();
+
+        game_window.add(panelCart_1.newPanelCart(100, 100, 0, 0));
+        game_window.add(panelCart_1.newPanelCart(200, 200, 1, 3));
+        game_window.add(panelCart_1.newPanelCart(300, 300, 2, 5));
+        game_window.add(panelCart_1.newPanelCart(400, 400, 3, 8));
 
         PanelCart.paint(50,50);
 
