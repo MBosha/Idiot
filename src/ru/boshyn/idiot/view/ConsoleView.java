@@ -76,16 +76,16 @@ public class ConsoleView extends JFrame {
         game_window.add(panelC);
 
         PanelCart panelCart_1 = new PanelCart();
-        game_window.add(panelCart_1.newPanelCart(100, 100, 1, 1));
+        game_window.add(panelCart_1.newPanelCart(100, 100, 0, 0));
 
         PanelCart panelCart_2 = new PanelCart();
-       //game_window.add(panelCart_2.newPanelCart(150, 150, 0, 0));
+       game_window.add(panelCart_2.newPanelCart(150, 150, 1, 1));
 
         PanelCart panelCart_3 = new PanelCart();
-        //game_window.add(panelCart_3.newPanelCart(200, 200, 0, 0));
+        game_window.add(panelCart_3.newPanelCart(200, 200, 2, 2));
 
         PanelCart panelCart_4 = new PanelCart();
-        //game_window.add(panelCart_4.newPanelCart(250, 250, 0, 0));
+        game_window.add(panelCart_4.newPanelCart(250, 250, 3, 3));
 
         game_window.setVisible(true); //сделать окно видимым
 

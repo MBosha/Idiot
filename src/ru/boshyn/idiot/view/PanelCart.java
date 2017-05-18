@@ -30,7 +30,21 @@ class PanelCart extends JPanel {
     private int indexLear;
     private int indexValue;
 
+    public int getIndexLear() {
+        return indexLear;
+    }
 
+    public int getIndexValue() {
+        return indexValue;
+    }
+
+    public void setIndexLear(int indexLear) {
+        this.indexLear = indexLear;
+    }
+
+    public void setIndexValue(int indexValue) {
+        this.indexValue = indexValue;
+    }
 
     //private ArrayList<Image> panelCarts = new ArrayList<Image>();
 
@@ -93,9 +107,9 @@ class PanelCart extends JPanel {
     }*/
 
     public PanelCart newPanelCart(int x, int y, int indexL, int indexV) throws IOException {
-        indexLear = indexL;
-        indexValue = indexV;
         GameFields panelCart = new GameFields();
+        panelCart.setIndexLear(indexL);
+        panelCart.setIndexValue(indexV);
         panelCart.setBackground(Color.RED);
         panelCart.setBounds(x, y, 25, 50);
         return panelCart;
@@ -117,13 +131,13 @@ class PanelCart extends JPanel {
         protected void paintComponent (Graphics g) {
             super.paintComponent(g);
             try {
-                Image image = panelSetImgLear(indexLear);
+                Image image = panelSetImgLear(this.getIndexLear());
                 onRepaint(g, image, 2, 0);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                onRepaint(g, panelSetImgValue(indexValue), 2, 26);
+                onRepaint(g, panelSetImgValue(this.getIndexValue()), 2, 26);
             } catch (IOException e) {
                 e.printStackTrace();
             }
