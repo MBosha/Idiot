@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class ConsoleView extends JFrame {
 
-    private static ConsoleView game_window;
+    private ConsoleView game_window;
     private static long last_ftame_time;
 
 
@@ -26,7 +26,7 @@ public class ConsoleView extends JFrame {
     public ConsoleView(String s) {
     }
 
-    public static void paintWindow() throws IOException {
+    public void paintWindow() throws IOException {
 
         game_window = new ConsoleView("И Д И О Т"); //создание окна
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //завершение программы при закрытии окна
@@ -76,40 +76,43 @@ public class ConsoleView extends JFrame {
         game_window.add(panelC);
 
         PanelCart panelCart_1 = new PanelCart();
+        game_window.add(panelCart_1.newPanelCart(100, 100, 1, 1));
+
         PanelCart panelCart_2 = new PanelCart();
+       //game_window.add(panelCart_2.newPanelCart(150, 150, 0, 0));
+
         PanelCart panelCart_3 = new PanelCart();
+        //game_window.add(panelCart_3.newPanelCart(200, 200, 0, 0));
+
         PanelCart panelCart_4 = new PanelCart();
+        //game_window.add(panelCart_4.newPanelCart(250, 250, 0, 0));
 
-        game_window.add(panelCart_1.newPanelCart(100, 100, 0, 0));
-        game_window.add(panelCart_1.newPanelCart(200, 200, 1, 3));
-        game_window.add(panelCart_1.newPanelCart(300, 300, 2, 5));
-        game_window.add(panelCart_1.newPanelCart(400, 400, 3, 8));
+        game_window.setVisible(true); //сделать окно видимым
 
-        PanelCart.paint(50,50);
+        //game_window.paint();
 
         //GameFields game_field = new GameFields();
 
-        panelC.addMouseListener(new MouseAdapter() {
+
+/*panelC.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 int x = e.getX();
                 int y = e.getY();
 
-                //float drop_right = drop_left + drop.getWidth(null);
-                //float drop_bottom = drop_top + drop.getHeight(null);
-                /*boolean is_drop = x > drop_left && x <= drop_right && y >= drop_top && y < drop_bottom;
+                float drop_right = drop_left + drop.getWidth(null);
+                float drop_bottom = drop_top + drop.getHeight(null);
+                boolean is_drop = x > drop_left && x <= drop_right && y >= drop_top && y < drop_bottom;
                 if (is_drop){
                     drop_top = -100;
                     drop_left = (int) Math.random() * (game_field.getWidth() - drop.getWidth(null));
                     drop_v = drop_v +5;
                     score++;
                     game_window.setTitle("Score: " + score);
-                }*/
-            }
-        });
-
-        game_window.setVisible(true); //сделать окно видимым
-
+                }
+            }*/
     }
+
 }
+

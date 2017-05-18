@@ -27,8 +27,10 @@ class PanelCart extends JPanel {
     private static Image king;
     private static Image ace;
 
-    private static int indexLear;
-    private static int indexValue;
+    private int indexLear;
+    private int indexValue;
+
+
 
     //private ArrayList<Image> panelCarts = new ArrayList<Image>();
 
@@ -90,9 +92,9 @@ class PanelCart extends JPanel {
         this.panelCarts = panelCarts;
     }*/
 
-    public static PanelCart newPanelCart(int x, int y, int indexLear, int indexValue) throws IOException {
-        PanelCart.indexLear = indexLear;
-        PanelCart.indexValue = indexValue;
+    public PanelCart newPanelCart(int x, int y, int indexL, int indexV) throws IOException {
+        indexLear = indexL;
+        indexValue = indexV;
         GameFields panelCart = new GameFields();
         panelCart.setBackground(Color.RED);
         panelCart.setBounds(x, y, 25, 50);
@@ -106,7 +108,7 @@ class PanelCart extends JPanel {
 
 
     public static boolean paint(int x, int y){
-        return graphics.drawImage (ace, x, y, null);
+        return graphics.drawImage (nine, x, y, null);
     }
 
     private static class GameFields extends PanelCart {
@@ -115,12 +117,13 @@ class PanelCart extends JPanel {
         protected void paintComponent (Graphics g) {
             super.paintComponent(g);
             try {
-                onRepaint(g, panelSetImgLear(PanelCart.indexLear), 2, 0);
+                Image image = panelSetImgLear(indexLear);
+                onRepaint(g, image, 2, 0);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                onRepaint(g, panelSetImgValue(PanelCart.indexValue), 2, 26);
+                onRepaint(g, panelSetImgValue(indexValue), 2, 26);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -284,7 +287,7 @@ class PanelCart extends JPanel {
 
         @Override
         public boolean drawImage(Image img, int x, int y, ImageObserver observer) {
-            return false;
+            return true;
         }
 
         @Override

@@ -29,7 +29,7 @@ public class Main {
       //sortBlockAllPlayers(game);
       EndGame.printGame(game, "Сортировка карт!", -1);
       ConsoleView consoleView = new ConsoleView("И Д И О Т"); //отобразить все на экране
-      ConsoleView.paintWindow();
+      consoleView.paintWindow();
 
       //игра
       while (!EndGame.endGame(game)) {
