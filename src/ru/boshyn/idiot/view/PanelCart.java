@@ -110,7 +110,7 @@ class PanelCart extends JPanel {
         GameFields panelCart = new GameFields();
         panelCart.setIndexLear(indexL);
         panelCart.setIndexValue(indexV);
-        panelCart.setBackground(Color.RED);
+        panelCart.setBackground(Color.white);
         panelCart.setBounds(x, y, 25, 50);
         return panelCart;
     }
