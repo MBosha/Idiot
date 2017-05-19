@@ -84,7 +84,7 @@ public class Block {
         Cart [] tempArray = new Cart[9];
         for (int i = 0; i < block.getSize(); i++) {
             Cart cart = block.getCart(i);
-            String value = cart.getValue(cart);
+            String value = cart.getValue();
             int index = IntValue(value);
             tempArray[index] = cart;
         }
