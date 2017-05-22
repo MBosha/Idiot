@@ -81,13 +81,13 @@ public class EndGame {
       if ((game.getStepBlock().getSize() - 1) >= i1) {
 
         cart1 = game.getStepBlock().getCart(i1);
-        cart1Lear = cart1.getLear(cart1);
-        cart1Value = cart1.getValue(cart1);
+        cart1Lear = cart1.getLear();
+        cart1Value = cart1.getValue();
       }
       if ((game.getStepBlock().getSize() - 1) >= i2) {
         cart2 = game.getStepBlock().getCart(i2);
-        cart2Lear = cart2.getLear(cart2);
-        cart2Value = cart2.getValue(cart2);
+        cart2Lear = cart2.getLear();
+        cart2Value = cart2.getValue();
       }
     }
     System.out.println(s);

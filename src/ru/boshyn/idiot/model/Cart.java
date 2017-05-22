@@ -29,14 +29,14 @@ public class Cart {
         return cart;
     }
 
-    public String getLear(Cart cart) {
+    public String getLear() {
         if (!this.cart.isEmpty()) {
-            return cart.getCart().get(0);
+            return this.getCart().get(0);
         }
         return null;
     }
 
-    public String getValue(Cart cart) {
-        return cart.getCart().get(1);
+    public String getValue() {
+        return this.getCart().get(1);
     }
 }

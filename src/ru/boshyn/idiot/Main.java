@@ -8,8 +8,15 @@ import ru.boshyn.idiot.model.Block;
 import ru.boshyn.idiot.model.Cart;
 import ru.boshyn.idiot.model.Game;
 import ru.boshyn.idiot.view.ConsoleView;
+import ru.boshyn.idiot.view.CustomListener;
+import ru.boshyn.idiot.view.ShowCart;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.ImageObserver;
 import java.io.IOException;
+import java.text.AttributedCharacterIterator;
 
 import static ru.boshyn.idiot.controllers.Logic.sortBlockAllPlayers;
 import static ru.boshyn.idiot.controllers.StartGame.mixBlock;
@@ -26,10 +33,18 @@ public class Main {
       EndGame.printGame(game, "Перемешивание карт!", -1);
       StartGame.giveCardToPlayers(game); //раздать карты игрокам
       EndGame.printGame(game, "Раздача карт!", -1);
+
       //sortBlockAllPlayers(game);
+
       EndGame.printGame(game, "Сортировка карт!", -1);
-      ConsoleView consoleView = new ConsoleView("И Д И О Т"); //отобразить все на экране
-      consoleView.paintWindow();
+
+      //отобразить все на экране
+      ConsoleView consoleView = new ConsoleView("И Д И О Т");
+      ConsoleView.paintWindow(game, consoleView);
+
+      //пауза
+      ConsoleView.weit(consoleView);
+      ShowCart.showAll(game, consoleView);
 
       //игра
       while (!EndGame.endGame(game)) {
@@ -45,6 +60,8 @@ public class Main {
           }
 
           EndGame.printGame(game, "После Хода!", count);
+          ConsoleView.weit(consoleView);
+          ShowCart.showAll(game, consoleView);
 
           if (CurrentStep.cover(game)) {
             if (EndGame.endCArt(game)) {
@@ -58,6 +75,8 @@ public class Main {
             //выход если не отбился
           }
           EndGame.printGame(game, "После отбоя!", count);
+          ConsoleView.weit(consoleView);
+          ShowCart.showAll(game, consoleView);
 
           if (count == 6) {
             CurrentStep.hangUp(game);
@@ -72,14 +91,23 @@ public class Main {
             count++;
           }
           EndGame.printGame(game, "После подбрасывания!", 0);
+          ConsoleView.weit(consoleView);
+          ShowCart.showAll(game, consoleView);
+
           CurrentStep.getLose(game);
           EndGame.printGame(game, "После взятия!", 0);
+          ConsoleView.weit(consoleView);
+          ShowCart.showAll(game, consoleView);
           // взять карты если не отбился
         }
         CurrentStep.addOnCard(game); // добрать карты из колоды
         EndGame.printGame(game, "После добора!", 0);
+        ConsoleView.weit(consoleView);
+        ShowCart.showAll(game, consoleView);
+
         //Logic.sortBlockAllPlayers(game);
         CurrentStep.changeCurrentPlayer(game); //сменить ходящего
+
       }
     }
 }

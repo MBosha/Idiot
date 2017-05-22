@@ -20,8 +20,8 @@ public class LogicTest {
             for (int i = 0; i < 6; i++) {
                 Block block = game.getPlayerBlock(j);
                 Cart cart = block.getCart(i);
-                String lear = cart.getLear(cart);
-                String value = cart.getValue(cart);
+                String lear = cart.getLear();
+                String value = cart.getValue();
                 System.out.println("Масть " + lear + " Значение " + value);
             }
             System.out.println();

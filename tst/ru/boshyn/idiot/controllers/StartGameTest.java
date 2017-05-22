@@ -42,8 +42,8 @@ public class StartGameTest {
         for (int i = 0; i < 36; i++) {
             Cart cart = new Cart();
             cart = block.getCart(i);
-            String s1 = cart.getLear(cart);
-            String s2 = cart.getValue(cart);
+            String s1 = cart.getLear();
+            String s2 = cart.getValue();
             System.out.println("Lear: " + s1 + " | Value: " + s2);
         }
         System.out.println("Size: " + block.getSize());

@@ -21,13 +21,13 @@ public class Logic {
       }
       for (int v = 0; v < size; v++) {
         Cart cart = block.getCart(v);
-        if (cart.getLear(cart) == lear) {
+        if (cart.getLear() == lear) {
           if (cartMin == null) {
             cartMin = cart;
             intMin = v;
           } else {
-            String cartValue = cart.getValue(cart);
-            String minValue = cartMin.getValue(cartMin);
+            String cartValue = cart.getValue();
+            String minValue = cartMin.getValue();
             int indexCart = IntValue(cartValue);
             int indexMin = IntValue(minValue);
             if (indexCart < indexMin) {
@@ -49,14 +49,14 @@ public class Logic {
   public static int findIndexCartMoo(Cart cart, Block block) {
     //найти индекс карты бальше заданной
     int sizeBlock = block.getSize();
-    String cartLear = cart.getLear(cart);
-    String cartValue = cart.getValue(cart);
+    String cartLear = cart.getLear();
+    String cartValue = cart.getValue();
     int indexCartValue = Logic.IntValue(cartValue);
     for (int i = 0; i < sizeBlock; i++) {
       Cart cartPlayer = block.getCart(i);
-      String cartPlayerLear = cartPlayer.getLear(cartPlayer);
+      String cartPlayerLear = cartPlayer.getLear();
       if (cartPlayerLear == cartLear) {
-        String CartPlayerValue = cartPlayer.getValue(cartPlayer);
+        String CartPlayerValue = cartPlayer.getValue();
         int indexCartPlayerValue = Logic.IntValue(CartPlayerValue);
         if (indexCartPlayerValue > indexCartValue) {
           return i;
@@ -83,7 +83,7 @@ public class Logic {
       for (int p = 0; p < 6; p++) {
         //цикл по картам колоды
         Cart playerCart = playerBlock.getCart(p);
-        String playerLear = playerCart.getLear(playerCart);
+        String playerLear = playerCart.getLear();
         switch (playerLear) {
           case "Spades":
             spades.addCart(playerCart);
@@ -152,14 +152,14 @@ public class Logic {
       Cart cartStepBlock = stepBlock.getCart(j);
       String valueСartStepBlock;
       if (cartStepBlock != null) {
-        valueСartStepBlock = cartStepBlock.getValue(cartStepBlock);
+        valueСartStepBlock = cartStepBlock.getValue();
       } else {
         valueСartStepBlock = null;
       }
       for (int k = 0; k < playerBlock.getSize(); k++) {
         //перебор карт игрока
         Cart cartPlayerBlock = playerBlock.getCart(k);
-        String valueCartPlayerBlock = cartPlayerBlock.getValue(cartPlayerBlock);
+        String valueCartPlayerBlock = cartPlayerBlock.getValue();
         if (valueСartStepBlock == valueCartPlayerBlock) {
           //если нашли совпадение по значению
           return k;

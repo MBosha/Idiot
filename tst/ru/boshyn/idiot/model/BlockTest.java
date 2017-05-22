@@ -30,10 +30,10 @@ public class BlockTest {
         cart2.newCart(cart2, 1, 1);
         Cart cart3 = block.getCart(0);
         Cart cart4 = block.getCart(1);
-        String s1 = cart1.getLear(cart1);
-        String s3 = cart3.getLear(cart3);
-        String s2 = cart1.getValue(cart1);
-        String s4 = cart3.getValue(cart3);
+        String s1 = cart1.getLear();
+        String s3 = cart3.getLear();
+        String s2 = cart1.getValue();
+        String s4 = cart3.getValue();
         assertEquals(s1, s3);
         assertEquals(s2, s4);
         System.out.println();

@@ -5,14 +5,15 @@ import org.jetbrains.annotations.Nullable;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.ImageObserver;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.IOException;
-import java.text.AttributedCharacterIterator;
 
 
 class PanelCart extends JPanel {
 
-    private static Image clubs;
+    /*private static Image clubs;
     private static Image diamonds;
     private static Image hearts;
     private static Image spades;
@@ -25,7 +26,7 @@ class PanelCart extends JPanel {
     private static Image jack;
     private static Image queen;
     private static Image king;
-    private static Image ace;
+    private static Image ace;*/
 
     private int indexLear;
     private int indexValue;
@@ -46,22 +47,20 @@ class PanelCart extends JPanel {
         this.indexValue = indexValue;
     }
 
-    //private ArrayList<Image> panelCarts = new ArrayList<Image>();
-
     @Nullable
     public static Image panelSetImgLear(int index) throws IOException {
         switch (index) {
             case 0 :
-                return  ImageIO.read(ConsoleView.class.getResourceAsStream("hearts.png"));
+                return  ImageIO.read(ConsoleView.class.getResourceAsStream("img/hearts.png"));
 
             case 1 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("diamonds.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/diamonds.png"));
 
             case 2 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("clubs.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/clubs.png"));
 
             case 3 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("spades.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/spades.png"));
         }
 
         return null;
@@ -72,42 +71,39 @@ class PanelCart extends JPanel {
     public static Image panelSetImgValue(int index) throws IOException {
         switch (index) {
             case 0 :
-            return  ImageIO.read(ConsoleView.class.getResourceAsStream("six.png"));
+            return  ImageIO.read(ConsoleView.class.getResourceAsStream("img/six.png"));
 
             case 1 :
-                return  ImageIO.read(ConsoleView.class.getResourceAsStream("seven.png"));
+                return  ImageIO.read(ConsoleView.class.getResourceAsStream("img/seven.png"));
 
             case 2 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("eight.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/eight.png"));
 
             case 3 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("nine.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/nine.png"));
 
             case 4 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("ten.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/ten.png"));
 
             case 5 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("jack.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/jack.png"));
 
             case 6 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("queen.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/queen.png"));
 
             case 7 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("king.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/king.png"));
 
             case 8 :
-                return ImageIO.read(ConsoleView.class.getResourceAsStream("ace.png"));
+                return ImageIO.read(ConsoleView.class.getResourceAsStream("img/ace.png"));
         }
 
         return null;
     }
 
-    /*public PanelCart() {
-        this.panelCarts = panelCarts;
-    }*/
 
-    public PanelCart newPanelCart(int x, int y, int indexL, int indexV) throws IOException {
-        GameFields panelCart = new GameFields();
+    public PanelCart newPanelCartVertical(int x, int y, int indexL, int indexV) throws IOException {
+        GameFieldsVertical panelCart = new GameFieldsVertical();
         panelCart.setIndexLear(indexL);
         panelCart.setIndexValue(indexV);
         panelCart.setBackground(Color.white);
@@ -115,17 +111,18 @@ class PanelCart extends JPanel {
         return panelCart;
     }
 
-
-    /*private void add(Image image) {
-        this.panelCarts.add(image);
-    }*/
-
-
-    public static boolean paint(int x, int y){
-        return graphics.drawImage (nine, x, y, null);
+    public PanelCart newPanelCartHorizontal(int x, int y, int indexL, int indexV) throws IOException {
+        GameFieldsHorizontal panelCart = new GameFieldsHorizontal();
+        panelCart.setIndexLear(indexL);
+        panelCart.setIndexValue(indexV);
+        panelCart.setBackground(Color.white);
+        panelCart.setBounds(x, y, 50, 25);
+        return panelCart;
     }
 
-    private static class GameFields extends PanelCart {
+
+
+    private static class GameFieldsVertical extends PanelCart {
 
         @Override
         protected void paintComponent (Graphics g) {
@@ -141,198 +138,47 @@ class PanelCart extends JPanel {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //PanelCart.indexLear = -1;
-            //PanelCart.indexValue = -1;
             repaint();
-
         }
+    }
 
+    private static class GameFieldsHorizontal extends PanelCart {
+
+        @Override
+        protected void paintComponent (Graphics g) {
+            super.paintComponent(g);
+            try {
+                Image image = panelSetImgLear(this.getIndexLear());
+                onRepaint(g, image, 2, 0);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                onRepaint(g, panelSetImgValue(this.getIndexValue()), 26, 0);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            repaint();
+        }
     }
 
     private static void onRepaint (Graphics g, Image image, int x, int y){
         g.drawImage (image, x, y, null);
     }
 
-    private static Graphics graphics = new Graphics() {
-        @Override
-        public Graphics create() {
-            return null;
+    public static void click(PanelCart panelCart) {
+        final int[] x = {-1};
+        final int[] y = {-1};
+        while (x[0] < 0) {
+            panelCart.addMouseListener(new MouseAdapter() {
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    super.mousePressed(e);
+                    x[0] = e.getX();
+                    y[0] = e.getY();
+                }
+            });
         }
-
-        @Override
-        public void translate(int x, int y) {
-
-        }
-
-        @Override
-        public Color getColor() {
-            return null;
-        }
-
-        @Override
-        public void setColor(Color c) {
-
-        }
-
-        @Override
-        public void setPaintMode() {
-
-        }
-
-        @Override
-        public void setXORMode(Color c1) {
-
-        }
-
-        @Override
-        public Font getFont() {
-            return null;
-        }
-
-        @Override
-        public void setFont(Font font) {
-
-        }
-
-        @Override
-        public FontMetrics getFontMetrics(Font f) {
-            return null;
-        }
-
-        @Override
-        public Rectangle getClipBounds() {
-            return null;
-        }
-
-        @Override
-        public void clipRect(int x, int y, int width, int height) {
-
-        }
-
-        @Override
-        public void setClip(int x, int y, int width, int height) {
-
-        }
-
-        @Override
-        public Shape getClip() {
-            return null;
-        }
-
-        @Override
-        public void setClip(Shape clip) {
-
-        }
-
-        @Override
-        public void copyArea(int x, int y, int width, int height, int dx, int dy) {
-
-        }
-
-        @Override
-        public void drawLine(int x1, int y1, int x2, int y2) {
-
-        }
-
-        @Override
-        public void fillRect(int x, int y, int width, int height) {
-
-        }
-
-        @Override
-        public void clearRect(int x, int y, int width, int height) {
-
-        }
-
-        @Override
-        public void drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
-
-        }
-
-        @Override
-        public void fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
-
-        }
-
-        @Override
-        public void drawOval(int x, int y, int width, int height) {
-
-        }
-
-        @Override
-        public void fillOval(int x, int y, int width, int height) {
-
-        }
-
-        @Override
-        public void drawArc(int x, int y, int width, int height, int startAngle, int arcAngle) {
-
-        }
-
-        @Override
-        public void fillArc(int x, int y, int width, int height, int startAngle, int arcAngle) {
-
-        }
-
-        @Override
-        public void drawPolyline(int[] xPoints, int[] yPoints, int nPoints) {
-
-        }
-
-        @Override
-        public void drawPolygon(int[] xPoints, int[] yPoints, int nPoints) {
-
-        }
-
-        @Override
-        public void fillPolygon(int[] xPoints, int[] yPoints, int nPoints) {
-
-        }
-
-        @Override
-        public void drawString(String str, int x, int y) {
-
-        }
-
-        @Override
-        public void drawString(AttributedCharacterIterator iterator, int x, int y) {
-
-        }
-
-        @Override
-        public boolean drawImage(Image img, int x, int y, ImageObserver observer) {
-            return true;
-        }
-
-        @Override
-        public boolean drawImage(Image img, int x, int y, int width, int height, ImageObserver observer) {
-            return false;
-        }
-
-        @Override
-        public boolean drawImage(Image img, int x, int y, Color bgcolor, ImageObserver observer) {
-            return false;
-        }
-
-        @Override
-        public boolean drawImage(Image img, int x, int y, int width, int height, Color bgcolor, ImageObserver observer) {
-            return false;
-        }
-
-        @Override
-        public boolean drawImage(Image img, int dx1, int dy1, int dx2, int dy2, int sx1, int sy1, int sx2, int sy2, ImageObserver observer) {
-            return false;
-        }
-
-        @Override
-        public boolean drawImage(Image img, int dx1, int dy1, int dx2, int dy2, int sx1, int sy1, int sx2, int sy2, Color bgcolor, ImageObserver observer) {
-            return false;
-        }
-
-        @Override
-        public void dispose() {
-
-        }
-    };
-
+    }
 }
