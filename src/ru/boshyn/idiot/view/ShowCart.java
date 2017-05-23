@@ -12,6 +12,7 @@ public class ShowCart {
     //аоказать карты всех игроков
     public static void showAll (final Game game, final ConsoleView consoleView) {
         consoleView.setVisible(false); //сделать окно невидимым
+        //consoleView.removeAll();
         horizontLineCart(10,25, 0, game, consoleView);
         horizontLineCart(110,425, 2, game, consoleView);
         verticalLineCart(410,25, 1, game, consoleView);
@@ -29,9 +30,9 @@ public class ShowCart {
             int indexLear = Logic.IntLear(lear);
             String value = cart.getValue();
             int indexValue = Logic.IntValue(value);
-            PanelCart panelCart = new PanelCart();
             try {
-                consoleView.add(panelCart.newPanelCartVertical(startX + 25*i, startY, indexLear, indexValue));
+                PanelCart panelCart = new PanelCart(0,startX + 25*i, startY, indexLear, indexValue);
+                consoleView.add(panelCart);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -47,9 +48,9 @@ public class ShowCart {
             int indexLear = Logic.IntLear(lear);
             String value = cart.getValue();
             int indexValue = Logic.IntValue(value);
-            PanelCart panelCart = new PanelCart();
             try {
-                consoleView.add(panelCart.newPanelCartHorizontal(startX, startY + 25*i, indexLear, indexValue));
+                PanelCart panelCart = new PanelCart(1,startX, startY + 25*i, indexLear, indexValue);
+                consoleView.add(panelCart);
             } catch (IOException e) {
                 e.printStackTrace();
             }

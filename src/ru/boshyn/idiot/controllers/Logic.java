@@ -66,7 +66,7 @@ public class Logic {
     return -1;
   }
 
-  public static void sortBlockAllPlayers(Game game) {
+  public static void sortBlockAllPlayers(final Game game) {
     //сортировка карт играющего
     //масти пики - крести - бубны - черви - козыри
     Block tempBlock = new Block();

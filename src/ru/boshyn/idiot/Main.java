@@ -2,25 +2,17 @@ package ru.boshyn.idiot;
 
 import ru.boshyn.idiot.controllers.CurrentStep;
 import ru.boshyn.idiot.controllers.EndGame;
-import ru.boshyn.idiot.controllers.Logic;
 import ru.boshyn.idiot.controllers.StartGame;
-import ru.boshyn.idiot.model.Block;
-import ru.boshyn.idiot.model.Cart;
 import ru.boshyn.idiot.model.Game;
 import ru.boshyn.idiot.view.ConsoleView;
-import ru.boshyn.idiot.view.CustomListener;
+import ru.boshyn.idiot.view.PlayerPanel;
 import ru.boshyn.idiot.view.ShowCart;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
-import java.text.AttributedCharacterIterator;
+import java.util.ArrayList;
 
-import static ru.boshyn.idiot.controllers.Logic.sortBlockAllPlayers;
+import static java.awt.Color.*;
 import static ru.boshyn.idiot.controllers.StartGame.mixBlock;
-import static ru.boshyn.idiot.model.Cart.newCart;
 
 public class Main {
 
@@ -34,16 +26,28 @@ public class Main {
       StartGame.giveCardToPlayers(game); //раздать карты игрокам
       EndGame.printGame(game, "Раздача карт!", -1);
 
-      //sortBlockAllPlayers(game);
-
+      //sortBlockAllPlayers(game); //сортировка карт у игроков
       EndGame.printGame(game, "Сортировка карт!", -1);
 
+      //оздать фрейм
+      ConsoleView consoleView = new ConsoleView();
+
+      ArrayList<PlayerPanel> playerPanels = new ArrayList<PlayerPanel>(4);
+      playerPanels.add(new PlayerPanel(cyan, "Player_1", 0, 0, 400, 100));
+      playerPanels.add(new PlayerPanel(blue, "Player_2", 400, 0, 100, 400));
+      playerPanels.add(new PlayerPanel(green, "Player_3", 100, 400, 400, 100));
+      playerPanels.add(new PlayerPanel(magenta, "Player_4", 0, 100, 100, 400));
+      playerPanels.add(new PlayerPanel(yellow, "CENTER", 100, 100, 300, 300));
+
       //отобразить все на экране
-      ConsoleView consoleView = new ConsoleView("И Д И О Т");
-      ConsoleView.paintWindow(game, consoleView);
+      //ConsoleView.setConsoleView(game, consoleView);
+      for (int i =0; i < 5; i++) {
+        consoleView.add(playerPanels.get(i));
+      }
+      consoleView.setVisible(true); //сделать окно видимым
 
       //пауза
-      ConsoleView.weit(consoleView);
+      ConsoleView.weitClick(consoleView);
       ShowCart.showAll(game, consoleView);
 
       //игра
@@ -60,7 +64,7 @@ public class Main {
           }
 
           EndGame.printGame(game, "После Хода!", count);
-          ConsoleView.weit(consoleView);
+          ConsoleView.weitClick(consoleView);
           ShowCart.showAll(game, consoleView);
 
           if (CurrentStep.cover(game)) {
@@ -75,7 +79,7 @@ public class Main {
             //выход если не отбился
           }
           EndGame.printGame(game, "После отбоя!", count);
-          ConsoleView.weit(consoleView);
+          ConsoleView.weitClick(consoleView);
           ShowCart.showAll(game, consoleView);
 
           if (count == 6) {
@@ -91,18 +95,18 @@ public class Main {
             count++;
           }
           EndGame.printGame(game, "После подбрасывания!", 0);
-          ConsoleView.weit(consoleView);
+          ConsoleView.weitClick(consoleView);
           ShowCart.showAll(game, consoleView);
 
           CurrentStep.getLose(game);
           EndGame.printGame(game, "После взятия!", 0);
-          ConsoleView.weit(consoleView);
+          ConsoleView.weitClick(consoleView);
           ShowCart.showAll(game, consoleView);
           // взять карты если не отбился
         }
         CurrentStep.addOnCard(game); // добрать карты из колоды
         EndGame.printGame(game, "После добора!", 0);
-        ConsoleView.weit(consoleView);
+        ConsoleView.weitClick(consoleView);
         ShowCart.showAll(game, consoleView);
 
         //Logic.sortBlockAllPlayers(game);
