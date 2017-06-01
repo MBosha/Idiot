@@ -77,12 +77,13 @@ class PanelCart extends JPanel {
     public PanelCart(final int type, final int x, final int y, final int indexL, final int indexV) throws IOException {
         if (type == 0) {
             //вертикальное расопложение карт
-            VirtualCart virtualCart = new VirtualCart(type, x, y, indexL, indexV);
+            VirtualCart virtualCart = new VirtualCart(type, indexL, indexV);
             this.setIndexLear(indexL);
             this.setIndexValue(indexV);
             this.setBackground(Color.white);
             this.setBounds(x, y, 25, 50);
         } else if (type == 1) {
+            VirtualCart virtualCart = new VirtualCart(type, indexL, indexV);
             this.setIndexLear(indexL);
             this.setIndexValue(indexV);
             this.setBackground(Color.white);
@@ -90,38 +91,46 @@ class PanelCart extends JPanel {
         }
     }
 
-    private static class VirtualCart extends PanelCart {
+    private static class VirtualCart extends JPanel {
         private int x1;
         private int y1;
         private int x2;
         private int y2;
+        private int type;
+        private int indexL;
+        private int indexV;
+        private Graphics g;
 
-        public VirtualCart (int type, int x, int y, int indexL, int indexV) throws IOException {
-            super(type, x, y, indexL, indexV);
+        public VirtualCart (int type, int indexL, int indexV) throws IOException {
+            super();
+            this.type = type;
+            this.indexL = indexL;
+            this.indexV = indexV;
+            this.paintComponent(g);
         }
 
         @Override
         protected void paintComponent(Graphics g) {
-            if (super.type == 0) {
+            if (type == 0) {
                 x1 = 2;
                 y1 = 2;
                 x2 = 26;
                 y2 = 2;
             }
-            if (super.type == 1) {
+            if (type == 1) {
                 x1 = 2;
                 y1 = 2;
                 x2 = 2;
                 y2 = 26;
             }
-            super.paintComponent(g);
+            //this.paintComponent(g);
             try {
-                onRepaint(g, panelSetImgLear(this.getIndexLear()), x1, y1);
+                onRepaint(g, panelSetImgLear(indexL), x1, y1);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                onRepaint(g, panelSetImgValue(this.getIndexValue()), x2, y2);
+                onRepaint(g, panelSetImgValue(indexV), x2, y2);
             } catch (IOException e) {
                 e.printStackTrace();
             }
