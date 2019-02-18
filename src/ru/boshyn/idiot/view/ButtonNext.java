@@ -1,9 +1,8 @@
 package ru.boshyn.idiot.view;
 
-import javafx.event.ActionEvent;
-
+//import javafx.event.ActionEvent;
 import javax.swing.*;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class ButtonNext extends JButton{
 
@@ -18,13 +17,21 @@ public class ButtonNext extends JButton{
 
         button.addActionListener(new ActionListener(){
 
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent e) {
+            protected ActionEvent actionEvent;
+
+            public void actionPerformed(ActionEvent event) {
+                button.setText("I've been clicked!");
+                ConsoleView.indexExit = 555;
+            }
+/**
+            public void actionPerformed(ActionEvent e) {
                 ConsoleView.indexExit = 555;
             }
             public void actionPerformed(ActionEvent e){
+                actionEvent = e;
                 ConsoleView.indexExit = 555;
             }
+ **/
         });
     }
 }

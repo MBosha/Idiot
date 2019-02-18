@@ -21,7 +21,7 @@ public class Main {
       //создание игры
       Game game = StartGame.CreateGame(); // создать игру
       EndGame.printGame(game, "Создание игры!", -1);
-      mixBlock(game); // перемешать колоду
+      StartGame.mixBlock(game); // перемешать колоду
       EndGame.printGame(game, "Перемешивание карт!", -1);
       StartGame.giveCardToPlayers(game); //раздать карты игрокам
       EndGame.printGame(game, "Раздача карт!", -1);
