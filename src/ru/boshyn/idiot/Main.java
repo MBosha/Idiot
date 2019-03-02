@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import static java.awt.Color.*;
-import static ru.boshyn.idiot.controllers.StartGame.mixBlock;
 
 public class Main {
 
@@ -20,7 +19,7 @@ public class Main {
 
       //создание игры
       Game game = StartGame.CreateGame(); // создать игру
-      EndGame.printGame(game, "Создание игры!", -1);
+      EndGame.printGame(game, "Создание игры!", 1);
       StartGame.mixBlock(game); // перемешать колоду
       EndGame.printGame(game, "Перемешивание карт!", -1);
       StartGame.giveCardToPlayers(game); //раздать карты игрокам
@@ -40,6 +39,7 @@ public class Main {
       playerPanels.add(new PlayerPanel(yellow, "CENTER", 100, 100, 300, 300));
 
       //отобразить все на экране
+        consoleView.repaint();
       //ConsoleView.setConsoleView(game, consoleView);
       for (int i =0; i < 5; i++) {
         consoleView.add(playerPanels.get(i));

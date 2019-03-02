@@ -4,25 +4,30 @@ import java.util.ArrayList;
 
 public class Cart {
 
-    private ArrayList<String> cart = new ArrayList<String>();
+    private ArrayList<String> cart;
 
     public Cart() {
-        this.cart = cart;
+        ArrayList<String> aList = new ArrayList<>();
+        this.cart = aList;
     }
 
-    public static Cart newCart(final Cart cart, final int intLear, final int intValue) {
-        //Cart cart = new Cart();
+    //смена масти и значения карты с очисткой
+    public static void changeCart(Cart cart, int intLear, int intValue) {
+        cart.clear();
         cart.add(String.valueOf(CartLear.values()[intLear]));
         cart.add(String.valueOf(CartValue.values()[intValue]));
-        return cart;
     }
 
     public int getSize() {
         return this.cart.size();
     }
 
-    private void add(String s) {
-        this.cart.add(s);
+    private void add(String str) {
+        this.cart.add(str);
+    }
+
+    private void clear() {
+        this.cart.clear();
     }
 
     public ArrayList<String> getCart() {
@@ -37,6 +42,9 @@ public class Cart {
     }
 
     public String getValue() {
-        return this.getCart().get(1);
+        if (!this.cart.isEmpty()) {
+            return this.getCart().get(1);
+        }
+        return null;
     }
 }

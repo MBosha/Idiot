@@ -1,6 +1,5 @@
 package ru.boshyn.idiot.controllers;
 
-import org.jetbrains.annotations.Nullable;
 import ru.boshyn.idiot.model.Block;
 import ru.boshyn.idiot.model.Cart;
 import ru.boshyn.idiot.model.CartLear;
@@ -74,15 +73,16 @@ public class Logic {
     Block clubs = new Block();
     Block diamonds = new Block();
     Block hearts = new Block();
+    Block tempPlayerBlock = new Block();
 
 
     for (int pl = 0; pl < 4; pl++) {
       //цикл игроков
-      Block playerBlock = game.getPlayerBlock(pl);
+      tempPlayerBlock = game.getPlayerBlock(pl);
       // достали колоду игрока
       for (int p = 0; p < 6; p++) {
         //цикл по картам колоды
-        Cart playerCart = playerBlock.getCart(p);
+        Cart playerCart = tempPlayerBlock.getCart(p);
         String playerLear = playerCart.getLear();
         switch (playerLear) {
           case "Spades":
@@ -99,47 +99,53 @@ public class Logic {
             break;
         }
       }
-      spades = spades.sortTemp(spades);
-      clubs = clubs.sortTemp(clubs);
-      diamonds = diamonds.sortTemp(diamonds);
-      hearts = hearts.sortTemp(hearts);
+      spades.sortTemp();
+      clubs.sortTemp();
+      diamonds.sortTemp();
+      hearts.sortTemp();
 
+      /*
       System.out.println(pl + " "
               + game.getPlayer(0).getPlayerBlock().getSize() + " "
               + game.getPlayer(1).getPlayerBlock().getSize() + " "
               + game.getPlayer(2).getPlayerBlock().getSize() + " "
               + game.getPlayer(3).getPlayerBlock().getSize() + " ");
       System.out.println();
+      */
 
       tempBlock.addBlock(spades);
       tempBlock.addBlock(clubs);
       tempBlock.addBlock(diamonds);
       tempBlock.addBlock(hearts);
 
+      /*
       System.out.println(pl + " "
               + game.getPlayer(0).getPlayerBlock().getSize() + " "
               + game.getPlayer(1).getPlayerBlock().getSize() + " "
               + game.getPlayer(2).getPlayerBlock().getSize() + " "
               + game.getPlayer(3).getPlayerBlock().getSize() + " ");
       System.out.println();
+      */
 
-      spades.clear(spades);
-      clubs.clear(clubs);
-      diamonds.clear(diamonds);
-      hearts.clear(hearts);
+      spades.clearBlock();
+      clubs.clearBlock();
+      diamonds.clearBlock();
+      hearts.clearBlock();
 
-      playerBlock.clear(playerBlock);
-      playerBlock.addBlock(tempBlock);
-      game.setPlayerBlock(playerBlock, pl);
-      tempBlock.clear(tempBlock);
+      tempPlayerBlock.clearBlock();
+      tempPlayerBlock.addBlock(tempBlock);
+      game.setPlayerBlock(tempPlayerBlock, pl);
+      tempBlock.clearBlock();
 
     }
+    /*
     System.out.println("выход "
                      + game.getPlayer(0).getPlayerBlock().getSize() + " "
                      + game.getPlayer(1).getPlayerBlock().getSize() + " "
                      + game.getPlayer(2).getPlayerBlock().getSize() + " "
                      + game.getPlayer(3).getPlayerBlock().getSize() + " ");
     System.out.println();
+    */
   }
 
 

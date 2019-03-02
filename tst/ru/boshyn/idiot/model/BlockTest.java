@@ -2,9 +2,7 @@ package ru.boshyn.idiot.model;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class BlockTest {
     @Test
@@ -12,10 +10,11 @@ public class BlockTest {
         final Block block  = new Block();
         Cart cart = new Cart();
         int count = 0;
-        for (int i = 0; i < 10; i++) {
-            cart.newCart(cart, 0, i);
+        for (int i = 0; i < 9; i++) {
+            cart.changeCart(cart,0, i);
             count++;
             block.addCart(cart);
+            System.out.println(i + " Карта " + cart.getLear() + " " + cart.getValue());
         }
         assertEquals(count, block.getSize());
     }
@@ -26,8 +25,8 @@ public class BlockTest {
         newBlock(block,4);
         Cart cart1 = new Cart();
         Cart cart2 = new Cart();
-        cart1.newCart(cart1, 0, 0);
-        cart2.newCart(cart2, 1, 1);
+        cart1.changeCart(cart1, 0, 0);
+        cart2.changeCart(cart2, 1, 1);
         Cart cart3 = block.getCart(0);
         Cart cart4 = block.getCart(1);
         String s1 = cart1.getLear();
@@ -47,7 +46,7 @@ public class BlockTest {
     private Block newBlock(Block block, int count) {
         for (int i = 0; i < count; i++) {
             Cart cart = new Cart();
-            cart.newCart(cart, i, i);
+            cart.changeCart(cart, i, i);
             block.addCart(cart);
         }
         return block;

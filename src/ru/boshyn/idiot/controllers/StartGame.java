@@ -14,7 +14,7 @@ public class StartGame {
         for (int lear = 0; lear < 4; lear++) {
             for (int value = 0; value < 9; value++) {
                 Cart cart = new Cart();
-                cart = cart.newCart(cart, lear,value);
+                cart.changeCart(cart, lear, value);
                 block.addCart(cart);
             }
         }

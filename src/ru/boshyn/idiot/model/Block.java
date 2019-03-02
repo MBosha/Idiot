@@ -6,10 +6,11 @@ import static ru.boshyn.idiot.controllers.Logic.IntValue;
 
 public class Block {
 
-    private ArrayList<Cart> block = new ArrayList<Cart>();
+    private ArrayList<Cart> block;
 
     public Block() {
-        this.block = block;
+        ArrayList<Cart> aList = new ArrayList<>();
+        this.block = aList;
     }
 
     public int getSize() {
@@ -20,12 +21,16 @@ public class Block {
         this.block.add(cart);
     }
 
+    public void clearBlock() {
+        this.block.clear();
+    }
+
     public Cart getCart(final int number) {
       //получить карту из колоды по индексу без удаления ее из колоды????
         if (checkNumber(number) && !this.block.isEmpty()) {
             return block.get(number);
         } else {
-            System.out.print("Wrong number card! " + number);
+            System.out.print("Wrong number card! Число: " + number + " Длина колоды: " + this.block.size());
             return null;
         }
     }
@@ -49,7 +54,7 @@ public class Block {
             block.removeCart(number);
             return cart;
         } else {
-          System.out.println("Wrong number card! " + number);
+          System.out.println("Wrong number card! Число: " + number + " Длина колоды: " + block.getSize());
           return null;
         }
     }
@@ -58,12 +63,12 @@ public class Block {
         this.block.remove(number);
     }
 
-    private boolean checkNumber(final int number) {
+    private boolean checkNumber(int number) {
       //проверка запрашиваемого индекса карты
         if (block.size() == 0) {
             System.out.println("No more cards!");
             return false;
-        } else if (block.size() >= number) {
+        } else if (block.size() > number) {
             return true;
         } else if (number < 0){
             System.out.println("Wrong number! N= " + number);
@@ -78,12 +83,12 @@ public class Block {
         }
     }
 
-    public Block sortTemp(Block block) {
+    public void sortTemp() {
         // сортировка по значению
         Block sortBlock = new Block();
         Cart [] tempArray = new Cart[9];
-        for (int i = 0; i < block.getSize(); i++) {
-            Cart cart = block.getCart(i);
+        for (int i = 0; i < this.block.size(); i++) {
+            Cart cart = this.block.get(i);
             String value = cart.getValue();
             int index = IntValue(value);
             tempArray[index] = cart;
@@ -93,6 +98,5 @@ public class Block {
                 sortBlock.addCart(tempArray[i]);
             }
         }
-        return sortBlock;
     }
 }
