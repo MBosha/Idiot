@@ -2,19 +2,18 @@ package ru.boshyn.idiot.controllers;
 
 import ru.boshyn.idiot.model.Block;
 import ru.boshyn.idiot.model.Cart;
-import ru.boshyn.idiot.model.CartLear;
 import ru.boshyn.idiot.model.Game;
 
 public class Logic {
 
   public static int findIndexMinCart(Block block, String trump) {
-    //найти индекс минимальной карты
+    //найти индекс минимальной не козырной карты
     //масти пики - трефы - бубны - козыри
     int size = block.getSize();
     Cart cartMin = null;
     int intMin = -1;
     for (int l = 0; l < 4; l++) {
-      String lear = String.valueOf(CartLear.values()[l]);
+      String lear = cartMin.getLear();
       if (lear == trump) {
         continue;
       }
@@ -84,17 +83,18 @@ public class Logic {
         //цикл по картам колоды
         Cart playerCart = tempPlayerBlock.getCart(p);
         String playerLear = playerCart.getLear();
+        //"♠", "♣", "♦", "♥"
         switch (playerLear) {
-          case "Spades":
+          case "♠":
             spades.addCart(playerCart);
             break;
-          case "Clubs":
+          case "♣":
             clubs.addCart(playerCart);
             break;
-          case "Diamonds":
+          case "♦":
             diamonds.addCart(playerCart);
             break;
-          case "Hearts":
+          case "♥":
             hearts.addCart(playerCart);
             break;
         }
@@ -104,48 +104,21 @@ public class Logic {
       diamonds.sortTemp();
       hearts.sortTemp();
 
-      /*
-      System.out.println(pl + " "
-              + game.getPlayer(0).getPlayerBlock().getSize() + " "
-              + game.getPlayer(1).getPlayerBlock().getSize() + " "
-              + game.getPlayer(2).getPlayerBlock().getSize() + " "
-              + game.getPlayer(3).getPlayerBlock().getSize() + " ");
-      System.out.println();
-      */
-
       tempBlock.addBlock(spades);
       tempBlock.addBlock(clubs);
       tempBlock.addBlock(diamonds);
       tempBlock.addBlock(hearts);
 
-      /*
-      System.out.println(pl + " "
-              + game.getPlayer(0).getPlayerBlock().getSize() + " "
-              + game.getPlayer(1).getPlayerBlock().getSize() + " "
-              + game.getPlayer(2).getPlayerBlock().getSize() + " "
-              + game.getPlayer(3).getPlayerBlock().getSize() + " ");
-      System.out.println();
-      */
-
       spades.clearBlock();
       clubs.clearBlock();
       diamonds.clearBlock();
       hearts.clearBlock();
-
       tempPlayerBlock.clearBlock();
       tempPlayerBlock.addBlock(tempBlock);
+
       game.setPlayerBlock(tempPlayerBlock, pl);
       tempBlock.clearBlock();
-
     }
-    /*
-    System.out.println("выход "
-                     + game.getPlayer(0).getPlayerBlock().getSize() + " "
-                     + game.getPlayer(1).getPlayerBlock().getSize() + " "
-                     + game.getPlayer(2).getPlayerBlock().getSize() + " "
-                     + game.getPlayer(3).getPlayerBlock().getSize() + " ");
-    System.out.println();
-    */
   }
 
 
@@ -190,23 +163,23 @@ public class Logic {
   }
 
   public static int IntValue (String value) {
-    if (value.equals("Six")) {
+    if (value.equals("6")) {
       return 0;
-    } else if (value.equals("Seven")) {
+    } else if (value.equals("7")) {
       return 1;
-    } else if (value.equals("Eight")) {
+    } else if (value.equals("8")) {
       return 2;
-    } else if (value.equals("Nine")) {
+    } else if (value.equals("9")) {
       return 3;
-    } else if (value.equals("Ten")) {
+    } else if (value.equals("10")) {
       return 4;
-    } else if (value.equals("Jack")) {
+    } else if (value.equals("J")) {
       return 5;
-    } else if (value.equals("Queen")) {
+    } else if (value.equals("Q")) {
       return 6;
-    } else if (value.equals("King")) {
+    } else if (value.equals("K")) {
       return 6;
-    } else if (value.equals("Ace")) {
+    } else if (value.equals("A")) {
       return 6;
     }
     return -1;

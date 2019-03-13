@@ -13,8 +13,7 @@ public class StartGame {
         Block block = new Block();
         for (int lear = 0; lear < 4; lear++) {
             for (int value = 0; value < 9; value++) {
-                Cart cart = new Cart();
-                cart.changeCart(cart, lear, value);
+                Cart cart = new Cart(lear, value);
                 block.addCart(cart);
             }
         }
@@ -52,7 +51,7 @@ public class StartGame {
         //установить козырь
         Random random = new Random();
         int number = random.nextInt(3);
-        String trump = String.valueOf(CartLear.values()[number]);
+        String trump = Cart.getLears(number);
         return trump;
     }
 

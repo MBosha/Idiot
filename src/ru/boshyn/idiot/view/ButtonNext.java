@@ -6,10 +6,8 @@ import java.awt.event.*;
 
 public class ButtonNext extends JButton{
 
-    public ButtonNext() {
-
-        JLabel labelNext = new JLabel("NEXT");
-        this.add(labelNext);
+    public ButtonNext(String text) {
+        super(text);
         this.setBounds(250,350,70,30);
     }
 
@@ -17,7 +15,7 @@ public class ButtonNext extends JButton{
 
         button.addActionListener(new ActionListener(){
 
-            protected ActionEvent actionEvent;
+            //protected ActionEvent actionEvent;
 
             public void actionPerformed(ActionEvent event) {
                 button.setText("I've been clicked!");

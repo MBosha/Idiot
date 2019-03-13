@@ -10,7 +10,7 @@ public class Block {
 
     public Block() {
         ArrayList<Cart> aList = new ArrayList<>();
-        this.block = aList;
+        block = aList;
     }
 
     public int getSize() {
@@ -93,9 +93,10 @@ public class Block {
             int index = IntValue(value);
             tempArray[index] = cart;
         }
+        this.block.clear();
         for (int i = 0; i < 9; i++) {
             if (tempArray[i] != null) {
-                sortBlock.addCart(tempArray[i]);
+                this.block.add(tempArray[i]);
             }
         }
     }

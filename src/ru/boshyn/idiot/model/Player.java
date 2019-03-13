@@ -1,6 +1,6 @@
 package ru.boshyn.idiot.model;
 
-import ru.boshyn.idiot.model.Block;
+import javax.swing.*;
 
 public class Player {
 
@@ -8,10 +8,13 @@ public class Player {
 
     private Block playerBlock;
 
+    private final JPanel playerPanel ;
+
     public Player(final String name,
                   final Block block) {
-        this.playerName = name;
-        this.playerBlock = block;
+        playerName = name;
+        playerBlock = block;
+        playerPanel = new JPanel();
     }
 
     public Block getPlayerBlock() {
