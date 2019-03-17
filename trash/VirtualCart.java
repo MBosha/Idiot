@@ -1,8 +1,5 @@
 package ru.boshyn.idiot.view;
 
-import javax.swing.*;
-import java.awt.*;
-
 import static ru.boshyn.idiot.model.Cart.cartLear;
 import static ru.boshyn.idiot.model.Cart.cartValue;
 

@@ -41,7 +41,6 @@ public class Cart extends JPanel {
         labelV.setSize(20, 20);
         labelV.setLocation(0,20);
         this.add(labelV);
-
     }
 
     public String getValue() {

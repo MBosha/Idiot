@@ -1,8 +1,5 @@
 package ru.boshyn.idiot.view;
 
-import javax.swing.*;
-import java.awt.*;
-
 public class PlayerPanel extends JPanel{
 
     public PlayerPanel(Color color, String playerName, int x, int y, int width, int height) {

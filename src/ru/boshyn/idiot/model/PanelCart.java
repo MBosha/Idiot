@@ -22,7 +22,6 @@ public class PanelCart extends JPanel {
         labelV.setLocation(0,30);
         this.add(labelV);
     }
-
 }
 
 
